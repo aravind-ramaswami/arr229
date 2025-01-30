@@ -1,4 +1,4 @@
-# Fast-Robots-MAE-5190-
+# MAE 5190 Fast Robots
 
 This is my fast robots website for MAE 5190. 
 
