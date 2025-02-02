@@ -6,7 +6,7 @@ Prelab: I downloaded the Arduino IDE and installed the necessary libraries to pr
 
 Task 1: Blink
 
-[Blink](https://youtube.com/shorts/03luXKfBtho?feature=share)
+[![Blink](https://youtube.com/shorts/03luXKfBtho?feature=share/0.jpg)](https://youtube.com/shorts/03luXKfBtho?feature=share)
 
 In this task, I loaded a default example program into the Artemis Nano that blinked its LED. This tested the basic functionality of the board. 
 
