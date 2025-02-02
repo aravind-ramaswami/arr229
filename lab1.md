@@ -41,25 +41,35 @@ In this task, I wrote code that caused the Atermis to turn on its LED and leave 
 
 # Part B:
 
-Task 1:
+Prelab: This section of the lab established bluetooth connection between the Artemis and my computer. It will be useful for sending data in the future. For the prelab, I setup a virtual environment called "FastRobots_ble" for this lab. In this environment, I installed these packages, "numpy pyyaml colorama nest_asyncio bleak jupyterlab", to gain the neccessary functionality. Finally, I downloaded the provided codebase, and got the arduino to print the mac adress. 
 
-Task 2:
+--insert image showing this--
 
-Task 3:
+--insert image showing configured ids on the jupyter notebook--
 
-Task 4:
+The provided codebase establishes the basic functionality for bluetooth connection between the Artemis and a computer. 
 
-Task 5:
+Task 1: ECHO
 
-Task 6:
+Task 2: SEND_THREE_FLOATS
 
-Task 7: 
+Task 3: GET_TIME_MILLIS
 
-Task 8:
+Task 4: Notification Handler
+
+Task 5: DATA RATE
+
+Task 6: SEND_TIME_DATA
+
+Task 7: GET_TEMP_READINGS
+
+Task 8: Method comparison
 
 5000 Level Tasks:
 
 Task 1:
+
+Task 2:
 
 Task 2:
 
