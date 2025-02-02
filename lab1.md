@@ -29,7 +29,15 @@ I tested the onboard Microphone to confirm its functionality and gain more exper
 
 5000 Level Tasks
 
-Task 1:
+Task 1: Blink on "C" note
+
+![Blink C Code](https://github.com/user-attachments/assets/15cfe333-2fb6-40f2-a185-c1eac448ab0c)
+
+[![Blink C Video](https://youtube.com/shorts/VY-fb7THgdQ?feature=share/0.jpg)](https://youtube.com/shorts/VY-fb7THgdQ?feature=share)
+
+In this task, I wrote code that caused the Atermis to turn on its LED and leave it on whenever a musical "C" note was played. Otherwise, the LED was off. The image and video above show the associated code and a demonstration. 
+
+
 
 # Part B:
 
