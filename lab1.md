@@ -18,6 +18,7 @@ I tested the serial communication between the Artemis and the computer. I had to
 
 Task 3: Temperature Sensor
 
+[![Temperature Sensor](https://youtu.be/ZFbKsTz90jE/0.jpg)](https://youtu.be/ZFbKsTz90jE)
 I tested the onboard temperature sensor on this board. You can see how the temperature data changes when I blow on it, confirming that it works. 
 
 Task 4: Microphone Output
