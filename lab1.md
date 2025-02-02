@@ -12,9 +12,13 @@ In this task, I loaded a default example program into the Artemis Nano that blin
 
 Task 2: Serial
 
+I tested the serial communication between the Artemis and the computer. I had to lower the baud rate to 9600 from 115200 to prevent my computer from crashing. 
+
 Task 3: Temperature Sensor
 
 Task 4: Microphone Output
+
+[![Microphone](https://youtu.be/Vjr9ALpmdrc/0.jpg)](https://youtu.be/Vjr9ALpmdrc)
 
 5000 Level Tasks
 
