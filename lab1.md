@@ -94,8 +94,19 @@ I set up a notification handler in Python that will receive a message and extrac
 
 Task 5: DATA RATE
 
+I wanted to test the data transfer rate between the Artemis and the computer. I programmed a loop on the Artemis which sent the current time for 6 seconds. 
+
+![image](https://github.com/user-attachments/assets/4f558205-f1ce-424d-b76e-ba0f939d0a0b)
+
+I used the notification handler to receive these messages and print them to the Jupyter Notebook console. 
+
+![image](https://github.com/user-attachments/assets/fa045aca-80eb-4dce-b1cd-dddb0b1832a9)
+
+I collected 242 messages in 6 seconds, so the Artemis can send about 40.3 messages/second. 
 
 Task 6: SEND_TIME_DATA
+
+
 
 Task 7: GET_TEMP_READINGS
 
