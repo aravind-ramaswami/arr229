@@ -106,6 +106,18 @@ I collected 242 messages in 6 seconds, so the Artemis can send about 40.3 messag
 
 Task 6: SEND_TIME_DATA
 
+I programmed the Artemis to collect 20 timestamps in an array, and then send those timestamps to the computer by looping through the array. 
+
+![image](https://github.com/user-attachments/assets/28ff837a-efba-4cdf-8013-4d3b412665ea)
+
+I wrote this notification handler to parse the incoming data and append it to a list. This notification handler was used for Tasks 6 and 7, so it had more functionality than is strictly necessary. 
+
+![image](https://github.com/user-attachments/assets/e0affb00-89cc-43ee-9215-fe093bd5cff5)\
+
+I tested out this message with the following python code. 
+
+![image](https://github.com/user-attachments/assets/8548af49-f13a-4acb-98d5-6c5dbbc6c19f)
+
 
 
 Task 7: GET_TEMP_READINGS
