@@ -49,13 +49,11 @@ After setting up the virtual environment, I downloaded the given Ble codebase, b
 
 ![image](https://github.com/user-attachments/assets/f6be6483-9110-43e0-b813-3d05f5002965)
 
-After setting up the Mac address, I 
+After setting up the Mac address, I modified the connections.yaml file to include this Mac address. I also generated a new uuid that enables the computer to identify the Artemis and send data to it. The following images show how the Mac address and uuid strings are the same for the Artemis and the computer. 
 
-![image](https://github.com/user-attachments/assets/d814f4ac-91f3-48c4-aba6-1138a8d2ace4)    ![image](https://github.com/user-attachments/assets/8658af19-5ec1-4a83-93df-4dc0567ebd88)
+![image](https://github.com/user-attachments/assets/d814f4ac-91f3-48c4-aba6-1138a8d2ace4)   
 
---insert image showing this--
-
---insert image showing configured IDs on the Jupyter notebook--
+![image](https://github.com/user-attachments/assets/8658af19-5ec1-4a83-93df-4dc0567ebd88)
 
 The provided codebase establishes the basic functionality for Bluetooth connection between the Artemis and a computer. 
 
