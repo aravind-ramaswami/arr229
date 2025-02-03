@@ -112,15 +112,23 @@ I programmed the Artemis to collect 20 timestamps in an array, and then send tho
 
 I wrote this notification handler to parse the incoming data and append it to a list. This notification handler was used for Tasks 6 and 7, so it had more functionality than is strictly necessary. 
 
-![image](https://github.com/user-attachments/assets/e0affb00-89cc-43ee-9215-fe093bd5cff5)\
+![image](https://github.com/user-attachments/assets/e0affb00-89cc-43ee-9215-fe093bd5cff5)
 
-I tested out this message with the following python code. 
+I tested out this message with the following Python code. 
 
 ![image](https://github.com/user-attachments/assets/8548af49-f13a-4acb-98d5-6c5dbbc6c19f)
 
-
-
 Task 7: GET_TEMP_READINGS
+
+This task was very similar to Task 6. I created another command in the Artemis that would append the current time and temperature for 20 iterations using the millis() and getTempDegF() commands into two separate lists. The Artemis would then loop through these lists and send the data to the computer. The Artemis code is shown below. 
+
+![image](https://github.com/user-attachments/assets/8194a7fc-105a-4afc-9d50-5b0b62df5f78)
+
+I used the same notification handler shown in task 6. It splits the incoming data into time and temperature data before appending them to separate lists. The same function is repeated below completeness. 
+
+![image](https://github.com/user-attachments/assets/e0affb00-89cc-43ee-9215-fe093bd5cff5)
+
+![image](https://github.com/user-attachments/assets/bdc4d78f-ebe7-4f41-9a15-a6404b705551)
 
 Task 8: Method comparison
 
