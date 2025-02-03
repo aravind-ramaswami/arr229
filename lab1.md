@@ -132,6 +132,13 @@ I used the same notification handler shown in task 6. It splits the incoming dat
 
 Task 8: Method comparison
 
+The 1st method sends data in real-time as it is received while the 2nd method collects data over an interval before very rapidly sending that data. The 2nd method can send data very rapidly. Investigating the output from the 2nd method, we can see that several timestamps have the same value, implying that the Artemis sent multiple data points within 1 ms. This is a very fast transfer rate, but it is not in real-time.
+
+The advantage of the 1st method is that it allows for real-time data communication, so the computer will receive data as the robot receives data. However, this method is slower since you have to wait for new sensor data before you can send it. The 2nd method has a very fast data transfer rate, but it is not real-time data. This could be a problem if the robot moves very fast, as the robot will move to a new location by the time it sends data about the previous location. Additionally, this method will store data on the Artemis, so it has a potential risk of running out of storage. The 1st method should be used if you need real-time updates about the state or want to debug the robot in real time. The 2nd method should be used if you want to record data from a sensor for later processing and analysis. It can also be used when executing stunts or collecting sensor data about a room, as the data will typically be processed after the robot completes its task. 
+
+The Artemis has 384kb or 384000 bytes of storage. Since the time and temperature values were stored as floats, each message's size was 4 bytes. Thus, at a maximum, the Artemis can store 96000 time values or 48000 time and temperature values before it runs out of storage. However, the true value will be lower. The time and temperature messages are packaged as strings, which take up some space. Additionally, accessing and running a script will probably take up a certain amount of RAM.  
+
+
 5000 Level Tasks:
 
 Task 1: Effective Data Rate and Overhead
