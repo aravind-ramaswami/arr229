@@ -160,7 +160,11 @@ On the computer side, I wrote a notification handler that added the incoming dat
 
 I repeated this same procedure for the delay times listed above. At each delay time, the computer received all the messages that the Artemis sent. From this, I can conclude that the BLE connection is very reliable. 
 
-# Conclusion
+# Discussion
+
+In this lab, I learned how to set up and send Bluetooth information between the Artemis and the computer. Additionally, this lab taught me how to embed videos and images inside of a github webpage. I also brushed up on C and Python coding skills, which will help me in future labs. 
+
+
 
 
 
