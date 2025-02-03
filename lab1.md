@@ -60,13 +60,23 @@ The provided codebase establishes the basic functionality for Bluetooth connecti
 
 Task 1: ECHO
 
-I programmed the Artemis to send a command back when it received a reply. If the message sent was "x", the returned message was "Robot says ->x:)". The code and successful demonstration are shown below. 
+I programmed the Artemis to send back a modified message when it received a reply. If the message sent was "x", the returned message was "Robot says ->x:)". The code and successful demonstration are shown below. 
 
 ![image](https://github.com/user-attachments/assets/5f3b7a6d-b397-4f46-a317-25d6c1a62faf)
 
 ![image](https://github.com/user-attachments/assets/c25ed099-22ae-4d5d-b190-eb56540835e0)
 
 Task 2: SEND_THREE_FLOATS
+
+I programmed the Artemis to decompose a message sent by the computer consisting of three floats and output those floats to the serial screen. This is code on the Artemis board.
+
+![image](https://github.com/user-attachments/assets/dc3727b2-8008-4eae-91e7-4f76cab790d5)
+
+The following images show a successful test of this command. 
+
+![image](https://github.com/user-attachments/assets/50630503-d791-487d-bb83-79f5654ad9be)
+
+![image](https://github.com/user-attachments/assets/2a5526f2-069a-4b04-b4da-241127812b0d)
 
 Task 3: GET_TIME_MILLIS
 
