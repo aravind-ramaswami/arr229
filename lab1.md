@@ -55,7 +55,8 @@ After setting up the Mac address, I modified the connections.yaml file to includ
 
 ![image](https://github.com/user-attachments/assets/8658af19-5ec1-4a83-93df-4dc0567ebd88)
 
-The provided codebase establishes the basic functionality for Bluetooth connection between the Artemis and a computer. 
+The provided codebase establishes the basic functionality for Bluetooth connection between the Artemis and a computer.  The uuids are unique identifiers that enable the computer to communicate with the Artemis and denote different types of data that you want to send. BLECStringCharacteristic.h EString.h and RobotCommand.h are helper files that define different types of message data that you can send to the computer. Finally, ble_arduino.ino handles the actual Bluetooth communication. When the computer sends a message, this file uses the uuids to receive the message, process it, and send back a reply (if desired). 
+
 
 Task 1: ECHO
 
