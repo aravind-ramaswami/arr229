@@ -41,13 +41,23 @@ In this task, I wrote code that caused the Atermis to turn on its LED and leave 
 
 # Part B:
 
-Prelab: This section of the lab established bluetooth connection between the Artemis and my computer. It will be useful for sending data in the future. For the prelab, I setup a virtual environment called "FastRobots_ble" for this lab. In this environment, I installed these packages, "numpy pyyaml colorama nest_asyncio bleak jupyterlab", to gain the neccessary functionality. Finally, I downloaded the provided codebase, and got the arduino to print the mac adress. 
+Prelab: This section of the lab established a Bluetooth connection between the Artemis and my computer. It will be useful for sending data in the future. For the prelab, I ran the commands shown in the figure below. These commands set up my virtual environment and installed the required packages. 
+
+![image](https://github.com/user-attachments/assets/c4176822-2773-4629-8c25-4700cc630acb)
+
+After setting up the virtual environment, I downloaded the given Ble codebase, burned it on the Artemis, and executed it to confirm that the Artemis displayed a Mac Address. The Artemis successfully displayed the following Mac address. 
+
+![image](https://github.com/user-attachments/assets/f6be6483-9110-43e0-b813-3d05f5002965)
+
+After setting up the Mac address, I 
+
+![image](https://github.com/user-attachments/assets/d814f4ac-91f3-48c4-aba6-1138a8d2ace4)    ![image](https://github.com/user-attachments/assets/8658af19-5ec1-4a83-93df-4dc0567ebd88)
 
 --insert image showing this--
 
---insert image showing configured ids on the jupyter notebook--
+--insert image showing configured IDs on the Jupyter notebook--
 
-The provided codebase establishes the basic functionality for bluetooth connection between the Artemis and a computer. 
+The provided codebase establishes the basic functionality for Bluetooth connection between the Artemis and a computer. 
 
 Task 1: ECHO
 
