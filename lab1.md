@@ -148,10 +148,19 @@ The corresponding Python code sends queries for different-sized messages and not
 
 From the graph, we can see that the data rate is significantly higher when the message size is larger. From this, we can see that sending short packets of data introduces a significant amount of overhead, limiting the data rate. As an example, the data rate for 5-byte messages was 29.14 bytes/s and the data rate for 120-byte messages was 499.3 bytes/s. 
 
-
-
-
 Task 2: Reliability
+
+To test the reliability, I sent messages at different rates, comparing the number of sent messages with the number received. On the Artemis, I programmed it to collect 20 timestamps in a list, and then send that array to the computer. I varied the delay time when sending the command. The image shows when the delay was 100ms, but I tried it at 0, 10,50,100, and 200.
+
+![image](https://github.com/user-attachments/assets/901e8dab-4518-4642-a014-a3d21f701fbc)
+
+On the computer side, I wrote a notification handler that added the incoming data to a list and printed both the list and the length of the list. The screenshot shows that the computer successfully received all 20 messages when the delay was 100 ms. 
+
+![image](https://github.com/user-attachments/assets/a1adb08c-e856-40df-9af8-c6da831f0861)
+
+I repeated this same procedure for the delay times listed above. At each delay time, the computer received all the messages that the Artemis sent. From this, I can conclude that the BLE connection is very reliable. 
+
+# Conclusion
 
 
 
