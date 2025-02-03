@@ -80,6 +80,12 @@ The following images show a successful test of this command.
 
 Task 3: GET_TIME_MILLIS
 
+I used the built-in millis() command on the Artemis to establish this. The code on the Artemis and computer sides is shown below. The computer side also shows a test this command, where the current time is queried from the Artemis. 
+
+![image](https://github.com/user-attachments/assets/d9b3ceba-8f6d-4ade-9948-c4d4424cb629)
+
+![image](https://github.com/user-attachments/assets/04291a20-a5ab-47b5-839e-611dc8b1ed3f)
+
 Task 4: Notification Handler
 
 Task 5: DATA RATE
@@ -96,7 +102,6 @@ Task 1:
 
 Task 2:
 
-Task 2:
 
 
 
