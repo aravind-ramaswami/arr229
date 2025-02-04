@@ -11,19 +11,20 @@ Task 1: Blink
 
 Task 2: Serial
 
-[![Serial](https://youtu.be/W-cWZUY_tTY/0.jpg)](https://youtu.be/W-cWZUY_tTY)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W-cWZUY_tTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 I had to lower the baud rate to 9600 from 115200 to prevent my computer from crashing.
 
 Task 3: Temperature Sensor
 
-[![Temperature Sensor](https://youtu.be/ZFbKsTz90jE/0.jpg)](https://youtu.be/ZFbKsTz90jE)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZFbKsTz90jE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 You can see how the temperature data changes when I blow on it, confirming that it works. 
 
 Task 4: Microphone Output
 
-[![Microphone](https://youtu.be/Vjr9ALpmdrc/0.jpg)](https://youtu.be/Vjr9ALpmdrc)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vjr9ALpmdrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I tested the Microphone to confirm its functionality and gain more experience with the programming language. The microphone picks up the finger and snaps. 
 
@@ -33,7 +34,7 @@ Task 1: Blink on "C" note
 
 ![Blink C Code](https://github.com/user-attachments/assets/15cfe333-2fb6-40f2-a185-c1eac448ab0c)
 
-[![Blink C Video](https://youtube.com/shorts/VY-fb7THgdQ?feature=share/0.jpg)](https://youtube.com/shorts/VY-fb7THgdQ?feature=share)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VY-fb7THgdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In this task, I wrote code that caused the Artemis to turn on its LED whenever a musical "C" note was detected. 
 
