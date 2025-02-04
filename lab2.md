@@ -1,13 +1,13 @@
 # LAB 2: IMU
 
-Setting up the IMU:
+# Setting up the IMU
 
-Accelerometer:
+# Accelerometer
 
-Gyroscope:
+# Gyroscope
 
-Sample Data:
+# Sample Data
 
-Stunt:
+# Stunt
 
 
