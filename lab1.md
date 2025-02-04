@@ -8,6 +8,9 @@ Task 1: Blink
 
 [![Blink](https://youtube.com/shorts/03luXKfBtho?feature=share/0.jpg)](https://youtube.com/shorts/03luXKfBtho?feature=share)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZFbKsTz90jE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 Task 2: Serial
 
 [![Serial](https://youtu.be/W-cWZUY_tTY/0.jpg)](https://youtu.be/W-cWZUY_tTY)
