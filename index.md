@@ -9,3 +9,6 @@ Hello, my name is Aravind Ramaswami and I am from Tucson, Arizona. I am a senior
 # Labs 
 [Lab 1: Artemis and Bluetooth](/lab1.md)
 
+[Lab 2: IMU](/lab2.md)
+
+
