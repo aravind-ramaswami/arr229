@@ -23,7 +23,7 @@ I also added a visual signal that the IMU had successfully turned on (LED blinks
 
 Using the example code, I played around with the IMU by rotating, flipping, and accelerating the board vertically. As the IMU accelerates, only the accelerometer in that direction changes and the gyroscope shows little change. Additionally, as the IMU flips, you can see the direction of the accelerometer change as different axis directions are aligned with gravity. As the IMU rotates, the accelerometer values constantly change while the gyroscope values are only non-zero while the IMU is actively rotating. If the IMU is stopped at a particular angle, the gyroscope will read small values, since it only tracks angular rates, not positions. This can all be seen in the video below, where the IMU is flipped, rotated, and accelerated. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NzEttMiU5Tw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0v_oAep2S0Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 # Accelerometer
@@ -165,13 +165,15 @@ The Artemis has 384 kiB of memory. With 3 arrays and 4 bits per float in the arr
 
 I stored time-stamped IMU data, as shown in this image. 
 
-![image](https://github.com/user-attachments/assets/157001ca-c9d9-4526-9266-f8754422ac43)
+![image](https://github.com/user-attachments/assets/aafa70b4-f659-41fd-b15c-97a9bff2e8c9)
 
-I also recorded 5.1 seconds on IMU data, as seen in this image which shows the difference between starting and stopping time stamps is over 5 seconds. 
+I also recorded 5.1 seconds on IMU data.
 
-![image](https://github.com/user-attachments/assets/dfa7590a-281d-4a93-befd-09fdbe24d3d5)
+![image](https://github.com/user-attachments/assets/8265561e-f5b2-4af8-bcda-6527f1acd95d)
 
-![image](https://github.com/user-attachments/assets/5796161c-21b8-4397-b4a1-d4c3a47797db)
+![image](https://github.com/user-attachments/assets/9a2f617d-f0d8-47d5-96fa-f75ca8d1e9ac)
+
+![image](https://github.com/user-attachments/assets/0fb4087b-e2bb-4ccb-861a-e466d5d748b2)
 
 # Stunt
 
