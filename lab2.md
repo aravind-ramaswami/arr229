@@ -4,11 +4,11 @@ The purpose of this lab was to get acquainted with IMU.
 
 # Setting up the IMU
 
-I connected the IMU to the Artemis using the QWIIC connectors.
+Hardware Setup:
 
 ![PXL_20250211_004745628](https://github.com/user-attachments/assets/08f4c46b-6c00-4a2f-9dc0-4c3ccf092e69)
 
-After connecting the IMU to the Artemis, I ran the example code to test its functionality. 
+Example Code:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ELP9Sbhi3_w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -64,7 +64,7 @@ These equations will give calibrated sensor outputs given a raw value. Overall, 
 
 # Noisy Data Analysis 
 
-I collected accelerometer data on the pitch and roll while moving it around to analyze the pitch and roll data. 
+I collected accelerometer data on the pitch and roll while moving it around. 
 
 Raw Data:
 
@@ -110,7 +110,7 @@ $$
 \psi_{gryo} = \psi_{gryo} + g_z * dt
 $$
 
-I implemented these equations with this code block:
+Code Block:
 
 ![image](https://github.com/user-attachments/assets/1ebef313-9301-42bd-a526-6b8186a1170a)
 
@@ -125,7 +125,7 @@ I held the IMU at a fixed angle and recorded the accelerometer, filtered acceler
 
 From this data, we can see that the gyroscope has significantly less noise than the accelerometer, but also drifts over time. Additionally, the accelerometer gave more accurate readings than the gyroscope when the IMU was held at a constant orientation. Finally, the gyroscope will become more accurate as the sampling frequency increases because the gyroscope can get updated measurements faster. 
 
-I implemented a complementarity filter to combine the accelerometer and gyroscope measurements into a single reliable signal. I chose $\gamma = 0.8$ since the accelerometer gave more accurate measurements so I wanted to weigh it more. I used the following equations:
+I implemented a complementarity filter to combine the accelerometer and gyroscope measurements into a single reliable signal. I chose $\gamma = 0.8$ since the accelerometer gave more accurate measurements so I wanted to weigh it more.
 
 $$
 \theta = (\theta + \theta_{gyro})*(1-\gamma) + \theta_a * \gamma
@@ -157,17 +157,17 @@ In my main loop, I recorded data if the flag was set and the IMU had new data. O
 
 ![image](https://github.com/user-attachments/assets/77ce2530-5462-4a0d-af72-ee529e4408fe)
 
-I processed the IMU data in a separate function shown below. I stored the data in 3 float arrays (pitch, roll, yaw) so I could process each array separately. Additionally, I can perform separate operations on each array such as filters or transforms. I stored them as floats as a balance between accuracy and space. Additionally, I stored the final combined  data in 3 arrays. I did not store the separate accelerometer, filtered accelerometer data, and gyroscope data in separate arrays to save space. I stored these values as floats and updated them as new data came in. 
+I processed the IMU data in a separate function shown below. I stored the data in 3 float arrays (pitch, roll, yaw) so I could process each array separately and perform separate operations on each array such as filters or transforms. I stored them as floats as a balance between accuracy and space. Additionally, I stored the final combined  data in 3 arrays. I did not store the separate accelerometer, filtered accelerometer data, and gyroscope data in separate arrays to save space. I stored these values as floats and updated them as new data came in. 
 
 ![image](https://github.com/user-attachments/assets/19d6b81a-7429-4abc-abed-a84afed6d43a)
 
 The Artemis has 384 kiB of memory. With 3 arrays and 4 bits per float in the array, each array can store up to 32000 elements in each array. Since the IMU processes data at 362hz, the Artemis can store about 88.4 seconds of IMU data if stored in 3 separate float arrays. This is the theoretical maximum, and the true value would be lower since the Artemis needs some memory for other processes. 
 
-I stored time-stamped IMU data, as shown in this image. 
+Time Stamped IMU Data:
 
 ![image](https://github.com/user-attachments/assets/aafa70b4-f659-41fd-b15c-97a9bff2e8c9)
 
-I also recorded 5.1 seconds on IMU data.
+5 seconds of IMU Data:
 
 ![image](https://github.com/user-attachments/assets/8265561e-f5b2-4af8-bcda-6527f1acd95d)
 
