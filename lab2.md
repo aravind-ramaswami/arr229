@@ -28,6 +28,13 @@ Using the example code, I played around with the IMU by rotating, flipping, and 
 
 # Accelerometer
 
+I analyzed the accelerometer by collecting data on the pitch and roll at {-90,0,90} degrees. I used the following equations in my code:
+
+![image](https://github.com/user-attachments/assets/0124093a-40ff-4502-9777-e9b1b6f68059)
+
+I collected this data:
+
+
 
 
 # Gyroscope
