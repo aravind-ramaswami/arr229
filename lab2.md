@@ -127,7 +127,29 @@ I held the IMU at a fixed angle and recorded the accelerometer, filtered acceler
 
 ![image](https://github.com/user-attachments/assets/7c1096ac-38c4-487f-893f-483331d16ec3)
 
-From this data, we can see that the gyroscope has significantly less noise than the accelerometer, but also drifts over time. Additionally, the accelerometer gave more accurate readings than the gyroscope when the IMU was held at a constant orientation. 
+From this data, we can see that the gyroscope has significantly less noise than the accelerometer, but also drifts over time. Additionally, the accelerometer gave more accurate readings than the gyroscope when the IMU was held at a constant orientation. Finally, the gyroscope will become more accurate as the sampling frequency increases because the gyroscope can get updated measurements faster. 
+
+I implemented a complementarity filter to combine the accelerometer and gyroscope measurements into a single reliable signal. I chose $\gamma = 0.8$ since the accelerometer gave more accurate measurements. I used the following equations:
+
+$$
+\theta = (\theta + \theta_gyro)*(1-\gamma) + \theta_a * \gamma
+$$
+
+$$
+\phi = (\phi + \theta_gyro)*(1-\gamma) + \phi_a * \gamma
+$$
+
+I implemented this filter with this code block:
+
+![image](https://github.com/user-attachments/assets/28c5f642-63e4-4319-bb82-7c81ecd493aa)
+
+This shows the results of my filter:
+
+![image](https://github.com/user-attachments/assets/3ac70848-ff1f-4c35-8ecb-30258814df90)
+
+![image](https://github.com/user-attachments/assets/830c0b18-eeb0-4e8a-9326-708b6740c3e8)
+
+The filter removes the vibrations, drift, and spikes from the input signal. It also gives accurate measurements that are unaffected by sudden spikes or vibrations. Finally, the filter also works for both positive and negative angles, making it a useful filter for future use. 
 
 # Sample Data
 
