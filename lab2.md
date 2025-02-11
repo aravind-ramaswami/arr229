@@ -19,7 +19,8 @@ AD0_VAL = 1 in the example code, indicating that the ADR jumper on the back of t
 
 I also added a visual signal that the IMU had successfully turned on (LED blinks three times)
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gODMkvEyXVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Task 2: Serial
 
 # Accelerometer
 
