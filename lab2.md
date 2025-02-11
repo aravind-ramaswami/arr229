@@ -76,6 +76,23 @@ FFT:
 
 ![image](https://github.com/user-attachments/assets/ce100c03-42e3-4cd1-adfb-397d48e3a1a0)
 
+From the FFT data, I saw that most of the amplitude is contained in the first few frequencies. I wanted to remove the higher frequencies to generate a very clean signal. To achieve this, I chose a cutoff frequency of 6Hz, which lets in the high-amplitude low frequencies while rejecting the noisy higher frequencies. 
+
+For the low pass filter:
+
+$$
+\alpha = \frac{T}{T + RC}
+$$
+
+T is 1/sampling frequency and $RC = 2*\pi*f$. In my case, this gave an $\alpha = 0.045$. I implemented this in the code block shown below. The output of my filter is also shown below. 
+
+![image](https://github.com/user-attachments/assets/6ddb9e9f-0d48-41cb-86d9-5ef611ccbc82)
+
+![image](https://github.com/user-attachments/assets/3fc528c2-186d-488d-a71e-01b56d695dfe)
+
+![image](https://github.com/user-attachments/assets/404285fc-b54e-46a4-90e5-59635a927d84)
+
+From the output, we can see that the low pass filter successfully reduced the noisy signal and filtered out spikes in the data. 
 
 # Gyroscope
 
