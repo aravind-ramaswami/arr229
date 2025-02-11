@@ -28,7 +28,7 @@ Using the example code, I played around with the IMU by rotating, flipping, and 
 
 # Accelerometer
 
-Calibration && Accuracy 
+# Calibration && Accuracy 
 
 I analyzed the accelerometer by collecting data on the pitch and roll at {-90,0,90} degrees. I used the following equations in my code:
 
@@ -62,7 +62,20 @@ Corrected Value = -90 + 1.0217 * (Raw Value + 90)
 
 These equations will give calibrated sensor outputs given a raw value. Overall, the accelerometer is very accurate, as the reference ranges nearly match the raw range. Additionally, the accelerometer measurements at -90, 0, and 90 degrees are very close to the reference values, with a maximum error of less than 2.5 degrees. The accelerometer is slightly more accurate for roll measurements, which is reflected in the relative two-point calibration equations for roll and pitch. 
 
-Noisy Data Analysis 
+# Noisy Data Analysis 
+
+I collected accelerometer data on the pitch and roll while moving it around to analyze the pitch and roll data. 
+
+Raw Data:
+
+![image](https://github.com/user-attachments/assets/9d4a0809-b760-4c93-bdc3-e93f46089c5e)
+
+FFT:
+
+![image](https://github.com/user-attachments/assets/7ca945e8-7d3b-492d-be26-34874d9eebc4)
+
+![image](https://github.com/user-attachments/assets/ce100c03-42e3-4cd1-adfb-397d48e3a1a0)
+
 
 # Gyroscope
 
