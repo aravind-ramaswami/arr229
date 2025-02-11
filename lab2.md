@@ -34,11 +34,11 @@ I analyzed the accelerometer by collecting data on the pitch and roll at {-90,0,
 
 I collected this data:
 
-| Header 1 | Header 2 | Header 3 |
+| True Angle | Measured Accelerometer Roll | Measured Accelerometer Pitch |
 |----------|----------|----------|
-| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 |
-| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 |
-| Row 3, Col 1 | Row 3, Col 2 | Row 3, Col 3 |
+| -90 | -89.15 | -88.23 |
+| 0 | -0.30 | -0.75 |
+| 90 | 87.83 | 87.94 |
 
 
 
