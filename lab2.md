@@ -153,7 +153,7 @@ I removed all serial print statements to speed up the main loop's execution. I a
 
 ![image](https://github.com/user-attachments/assets/b00061a6-4e63-4374-83f0-3ee93fc96a21)
 
-In my main loop, I recorded data if the flag was set and the IMU had new data. Otherwise, the main loop kept executing. 
+In my main loop, I recorded data if the flag was set and the IMU had new data. Otherwise, the main loop kept executing to maximize speed. 
 
 ![image](https://github.com/user-attachments/assets/77ce2530-5462-4a0d-af72-ee529e4408fe)
 
