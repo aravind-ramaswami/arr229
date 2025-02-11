@@ -92,7 +92,7 @@ T is 1/sampling frequency and $RC = 2*\pi*f$. In my case, this gave an $\alpha =
 
 ![image](https://github.com/user-attachments/assets/404285fc-b54e-46a4-90e5-59635a927d84)
 
-From the output, we can see that the low pass filter successfully reduced the noisy signal and filtered out spikes in the data. 
+The output shows that the low pass filter successfully reduced the noisy signal and filtered out spikes in the data. 
 
 # Gyroscope
 
