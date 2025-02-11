@@ -169,12 +169,16 @@ The Artemis has 384 kiB of memory. With 3 arrays and 4 bits per float, each arra
 
 I stored time-stamped IMU data, as shown in this image. 
 
-I also recorded 5.1 seconds on IMU data, as seen in this image. 
+![image](https://github.com/user-attachments/assets/157001ca-c9d9-4526-9266-f8754422ac43)
 
+I also recorded 5.1 seconds on IMU data, as seen in this image which shows the difference between starting and stopping time stamps is over 5 seconds. 
 
+![image](https://github.com/user-attachments/assets/dfa7590a-281d-4a93-befd-09fdbe24d3d5)
 
-
+![image](https://github.com/user-attachments/assets/5796161c-21b8-4397-b4a1-d4c3a47797db)
 
 # Stunt
+
+I recorded a stunt with my robot. 
 
 
