@@ -96,6 +96,39 @@ From the output, we can see that the low pass filter successfully reduced the no
 
 # Gyroscope
 
+I converted the gyroscope measurements to pitch, roll, and yaw using the following equations.
+
+$$
+
+\theta_gyro = \theta_gyro + g_y * dt
+
+$$
+
+$$
+
+\phi_gyro = \theta_gyro + g_x * dt
+
+$$
+
+$$
+\psi_gryo = \psi_gryo + g_z * dt
+$$
+
+I implemented these equations with this code block:
+
+![image](https://github.com/user-attachments/assets/1ebef313-9301-42bd-a526-6b8186a1170a)
+
+
+I held the IMU at a fixed angle and recorded the accelerometer, filtered accelerometer, and gyroscope data. 
+
+![image](https://github.com/user-attachments/assets/4357da70-fe01-4f7e-a318-da65d41545ba)
+
+![image](https://github.com/user-attachments/assets/05a979f3-d19b-473a-86fc-896b784dd283)
+
+![image](https://github.com/user-attachments/assets/7c1096ac-38c4-487f-893f-483331d16ec3)
+
+From this data, we can see that the gyroscope has significantly less noise than the accelerometer, but also drifts over time. Additionally, the accelerometer gave more accurate readings than the gyroscope when the IMU was held at a constant orientation. 
+
 # Sample Data
 
 # Stunt
