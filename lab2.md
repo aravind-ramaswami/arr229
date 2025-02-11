@@ -40,7 +40,25 @@ I collected this data:
 | 0 | -0.30 | -0.75 |
 | 90 | 87.83 | 87.94 |
 
+Using this data, I performed a two-point calibration as described here: https://learn.adafruit.com/calibrating-sensors/two-point-calibration
 
+Roll:
+
+Reference Range = 90 - (-90) = 180
+
+Raw Range = 87.83 - (-89.15) = 176.98
+
+Corrected Value = -90 + 1.017 * (Raw Value + 90)
+
+Pitch:
+
+Reference Range = 90 - (-90) = 180
+
+Raw Range = 87.94 - (-88.23) = 176.17
+
+Corrected Value = -90 + 1.0217 * (Raw Value + 90)
+
+These equations will give calibrated sensor outputs given a raw value. Overall, the accelerometer is very accurate, as the reference ranges nearly match the raw range. Additionally, the accelerometer measurements at -90, 0, and 90 degrees are very close to the reference values, with a maximum error of less than 2.5 degrees. The accelerometer is slightly more accurate for roll measurements, which is reflected in the relative two-point calibration equations for roll and pitch. 
 
 # Gyroscope
 
