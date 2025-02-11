@@ -100,18 +100,18 @@ I converted the gyroscope measurements to pitch, roll, and yaw using the followi
 
 $$
 
-\theta_gyro = \theta_gyro + g_y * dt
+\theta_{gyro} = \theta_{gyro} + g_y * dt
 
 $$
 
 $$
 
-\phi_gyro = \theta_gyro + g_x * dt
+\phi_{gyro} = \theta_{gyro} + g_x * dt
 
 $$
 
 $$
-\psi_gryo = \psi_gryo + g_z * dt
+\psi_{gryo} = \psi_{gryo} + g_z * dt
 $$
 
 I implemented these equations with this code block:
@@ -132,11 +132,11 @@ From this data, we can see that the gyroscope has significantly less noise than 
 I implemented a complementarity filter to combine the accelerometer and gyroscope measurements into a single reliable signal. I chose $\gamma = 0.8$ since the accelerometer gave more accurate measurements. I used the following equations:
 
 $$
-\theta = (\theta + \theta_gyro)*(1-\gamma) + \theta_a * \gamma
+\theta = (\theta + \theta_{gyro})*(1-\gamma) + \theta_a * \gamma
 $$
 
 $$
-\phi = (\phi + \theta_gyro)*(1-\gamma) + \phi_a * \gamma
+\phi = (\phi + \theta_{gyro})*(1-\gamma) + \phi_a * \gamma
 $$
 
 I implemented this filter with this code block:
