@@ -99,15 +99,11 @@ The output shows that the low pass filter successfully reduced the noisy signal 
 I converted the gyroscope measurements to pitch, roll, and yaw using the following equations.
 
 $$
-
 \theta_{gyro} = \theta_{gyro} + g_y * dt
-
 $$
 
 $$
-
 \phi_{gyro} = \theta_{gyro} + g_x * dt
-
 $$
 
 $$
