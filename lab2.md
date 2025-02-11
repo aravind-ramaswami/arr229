@@ -153,6 +153,28 @@ The filter removes the vibrations, drift, and spikes from the input signal. It a
 
 # Sample Data
 
+I removed all serial print statements to speed up the execution of the main loop. I also added flags to start and stop data recording. These flags were necessary because the Artemis main loop runs faster than the IMU can process data. After speeding up, the IMU data is at a rate of 362hz while the Artemis runs at 48 MHz, so the Artemis runs much faster than the IMU. 
+
+![image](https://github.com/user-attachments/assets/b00061a6-4e63-4374-83f0-3ee93fc96a21)
+
+In my main loop, I recorded data if the flag was set and the IMU had new data. Otherwise, the main loop kept executing. 
+
+![image](https://github.com/user-attachments/assets/77ce2530-5462-4a0d-af72-ee529e4408fe)
+
+I processed the IMU data in a separate function shown below. I stored the data in 3 float arrays (pitch, roll, yaw) so I could process each array separately. Additionally, I can perform separate operations on each array such as filters or transforms. I stored them as floats as a balance between accuracy and space. Additionally, I stored the final combined  data in 3 arrays. I did not store the separate accelerometer, filtered accelerometer data, and gyroscope data in separate arrays to save space. I stored these values as floats and updated them as new data came in. 
+
+![image](https://github.com/user-attachments/assets/19d6b81a-7429-4abc-abed-a84afed6d43a)
+
+The Artemis has 384 kiB of memory. With 3 arrays and 4 bits per float, each array can store up to 32000 floats per array. Since the IMU processes data at 362hz, the Artemis can store about 88.4 seconds of IMU data if the data is stored in 3 separate float arrays. This is the theoretical maximum, and the true value would be lower since the Artemis needs some memory for other processes. 
+
+I stored time-stamped IMU data, as shown in this image. 
+
+I also recorded 5.1 seconds on IMU data, as seen in this image. 
+
+
+
+
+
 # Stunt
 
 
