@@ -125,7 +125,7 @@ I held the IMU at a fixed angle and recorded the accelerometer, filtered acceler
 
 From this data, we can see that the gyroscope has significantly less noise than the accelerometer, but also drifts over time. Additionally, the accelerometer gave more accurate readings than the gyroscope when the IMU was held at a constant orientation. Finally, the gyroscope will become more accurate as the sampling frequency increases because the gyroscope can get updated measurements faster. 
 
-I implemented a complementarity filter to combine the accelerometer and gyroscope measurements into a single reliable signal. I chose $\gamma = 0.8$ since the accelerometer gave more accurate measurements. I used the following equations:
+I implemented a complementarity filter to combine the accelerometer and gyroscope measurements into a single reliable signal. I chose $\gamma = 0.8$ since the accelerometer gave more accurate measurements so I wanted to weigh it more. I used the following equations:
 
 $$
 \theta = (\theta + \theta_{gyro})*(1-\gamma) + \theta_a * \gamma
@@ -149,7 +149,7 @@ The filter removes the vibrations, drift, and spikes from the input signal. It a
 
 # Sample Data
 
-I removed all serial print statements to speed up the execution of the main loop. I also added flags to start and stop data recording. These flags were necessary because the Artemis main loop runs faster than the IMU can process data. After speeding up, the IMU data is at a rate of 362hz while the Artemis runs at 48 MHz, so the Artemis runs much faster than the IMU. 
+I removed all serial print statements to speed up the main loop's execution. I also added flags to start and stop data recording. These flags were necessary because the Artemis main loop runs faster than the IMU can process data. After speeding up, the IMU data is at a rate of 362 Hz, while the Artemis runs at 48 MHz, so the Artemis runs much faster than the IMU. 
 
 ![image](https://github.com/user-attachments/assets/b00061a6-4e63-4374-83f0-3ee93fc96a21)
 
@@ -161,7 +161,7 @@ I processed the IMU data in a separate function shown below. I stored the data i
 
 ![image](https://github.com/user-attachments/assets/19d6b81a-7429-4abc-abed-a84afed6d43a)
 
-The Artemis has 384 kiB of memory. With 3 arrays and 4 bits per float, each array can store up to 32000 floats per array. Since the IMU processes data at 362hz, the Artemis can store about 88.4 seconds of IMU data if the data is stored in 3 separate float arrays. This is the theoretical maximum, and the true value would be lower since the Artemis needs some memory for other processes. 
+The Artemis has 384 kiB of memory. With 3 arrays and 4 bits per float in the array, each array can store up to 32000 elements in each array. Since the IMU processes data at 362hz, the Artemis can store about 88.4 seconds of IMU data if stored in 3 separate float arrays. This is the theoretical maximum, and the true value would be lower since the Artemis needs some memory for other processes. 
 
 I stored time-stamped IMU data, as shown in this image. 
 
