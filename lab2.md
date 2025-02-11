@@ -20,6 +20,7 @@ I also added a visual signal that the IMU had successfully turned on (LED blinks
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gODMkvEyXVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 Using the example code, I played around with the IMU by rotating, flipping, and accelerating the board vertically. As the IMU accelerates, only the accelerometer in that direction changes and the gyroscope shows little change. Additionally, as the IMU flips, you can see the direction of the accelerometer change as different axis directions are aligned with gravity. As the IMU rotates, the accelerometer values constantly change while the gyroscope values are only non-zero while the IMU is actively rotating. If the IMU is stopped at a particular angle, the gyroscope will read small values, since it only tracks angular rates, not positions. This can all be seen in the video below, where the IMU is flipped, rotated, and accelerated. 
 
 
