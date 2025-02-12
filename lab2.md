@@ -80,9 +80,7 @@ From the FFT data, I saw that most of the amplitude is contained in the first fe
 
 For the low pass filter:
 
-$$
-\alpha = \frac{T}{T + RC}
-$$
+![image](https://github.com/user-attachments/assets/487a1fe3-17c6-4995-a1f0-b48ae0006736)
 
 T is 1/sampling frequency and $RC = 2*\pi*f$. In my case, this gave an $\alpha = 0.045$. I implemented this in the code block shown below. The output of my filter is also shown below. 
 
@@ -98,17 +96,7 @@ The output shows that the low pass filter successfully reduced the noisy signal 
 
 I converted the gyroscope measurements to pitch, roll, and yaw using the following equations.
 
-$$
-\theta_{gyro} = \theta_{gyro} + g_y * dt
-$$
-
-$$
-\phi_{gyro} = \theta_{gyro} + g_x * dt
-$$
-
-$$
-\psi_{gryo} = \psi_{gryo} + g_z * dt
-$$
+![image](https://github.com/user-attachments/assets/f2ac572e-3493-4ce9-85b4-5b5c89f06cf6)
 
 Code Block:
 
@@ -127,13 +115,7 @@ From this data, we can see that the gyroscope has significantly less noise than 
 
 I implemented a complementarity filter to combine the accelerometer and gyroscope measurements into a single reliable signal. I chose $\gamma = 0.8$ since the accelerometer gave more accurate measurements so I wanted to weigh it more.
 
-$$
-\theta = (\theta + \theta_{gyro})*(1-\gamma) + \theta_a * \gamma
-$$
-
-$$
-\phi = (\phi + \theta_{gyro})*(1-\gamma) + \phi_a * \gamma
-$$
+![image](https://github.com/user-attachments/assets/6a7a0b72-1f18-4c2d-8f93-10f823b283e4)
 
 I implemented this filter with this code block:
 
