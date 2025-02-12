@@ -82,7 +82,7 @@ For the low pass filter:
 
 ![image](https://github.com/user-attachments/assets/487a1fe3-17c6-4995-a1f0-b48ae0006736)
 
-T is 1/sampling frequency and $RC = 2*\pi*f$. In my case, this gave an $\alpha = 0.045$. I implemented this in the code block shown below. The output of my filter is also shown below. 
+T is 1/sampling frequency and RC = 2*pi*f. In my case, this gave an alpha = 0.045. I implemented this in the code block shown below. The output of my filter is also shown below. 
 
 ![image](https://github.com/user-attachments/assets/6ddb9e9f-0d48-41cb-86d9-5ef611ccbc82)
 
