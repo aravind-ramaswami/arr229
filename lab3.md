@@ -14,6 +14,29 @@ Here is a sketch of my wiring diagram. I used the two long connectors to the TOF
 
 # Lab Tasks 
 
+# TOF Sensor Connections
+
+This shows the hardware connections for the TOF sensors to the QWIIC breakout board. It also shows the battery connected to the Artemis.
+
+![PXL_20250218_204834579](https://github.com/user-attachments/assets/e4b174f3-69d6-40ad-9f4e-cc34e2169ea8)
+
+# i2c connection
+
+# TOF Sensor Mode
+
+# 2 TOF Sensors + IMU
+
+# TOF Sensor Speed
+
+# Time vs Distance
+
+# Time vs Angle
+
+# 5000 Levels Tasks
+
+# IR-based Sensors
+
+# TOF Sensor Sensitivity to Color/Textures
 
 
 
