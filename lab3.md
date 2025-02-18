@@ -28,6 +28,11 @@ The TOF sensor was listed as 0x29 when I expected it to be 0x52. Upon further in
 
 # TOF Sensor Mode
 
+I initially read through the dataset to investigate the three different sensor modes. However, the Arduino library only supports two sensor modes (short, long), so I focused on those. The long mode is good up to 4 meters but is sensitive to lighting conditions. The short mode is only good up to 1.3 meters, but is robust to noise. Since 1.3 meters is about 4 feet, this mode will give enough distances for the vast majority of tasks that I have to complete, so I chose to set both sensors on short mode to make them robust to noisy conditions. 
+
+
+
+
 # 2 TOF Sensors + IMU
 
 # TOF Sensor Speed
