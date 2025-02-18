@@ -22,6 +22,10 @@ This shows the hardware connections for the TOF sensors to the QWIIC breakout bo
 
 # i2c connection
 
+![image](https://github.com/user-attachments/assets/750244fc-d572-42f2-9d72-caebfe939504)
+
+The TOF sensor was listed as 0x29 when I expected it to be 0x52. Upon further inspection, I realized that the i2c protocol uses the last digit (LSB) as the read/write bit. As a result, the original address (0x52) is bit shifted to the right, yielding 0x29. 
+
 # TOF Sensor Mode
 
 # 2 TOF Sensors + IMU
