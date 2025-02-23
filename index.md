@@ -11,4 +11,6 @@ Hello, my name is Aravind Ramaswami and I am from Tucson, Arizona. I am a senior
 
 [Lab 2: IMU](/lab2.md)
 
+[Lab 3: TOF](/lab3.md)
+
 
