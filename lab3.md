@@ -46,6 +46,8 @@ I modified the code so I could use two TOF sensors simultaneously. I used the fo
 
 Using this, I successfully ran both sensors and printed their output to the screen, as shown in the following video. 
 
+
+
 # TOF Sensor Speed
 
 After testing out both sensors, I modified the Arduino code so the sensors could run as fast as possible. I printed the clock to Serial to analyze the Artemis loop speed compared to the TOF speed. I used this code:
