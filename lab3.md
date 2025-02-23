@@ -48,6 +48,16 @@ Using this, I successfully ran both sensors and printed their output to the scre
 
 # TOF Sensor Speed
 
+After testing out both sensors, I modified the Arduino code so the sensors could run as fast as possible. I printed the clock to Serial to analyze the Artemis loop speed compared to the TOF speed. I used this code:
+
+![image](https://github.com/user-attachments/assets/097ee00d-7657-4d43-8f0b-197a0974a345)
+
+This image shows the Serial monitor while running this code. 
+
+![Screenshot 2025-02-22 161109](https://github.com/user-attachments/assets/59627cf9-3229-4788-9b17-59cbf7593c4d)
+
+From the screenshot, we can see that the Artemis loop runs every 13ms which is a frequency of about 76 hz. The sensors run about every 98ms which is a frequency of 10.2 hz. The sensors run slower than the loop, so they are the limiting factor when running this code. 
+
 # Time vs Distance
 
 # Time vs Angle
