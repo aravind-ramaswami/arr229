@@ -58,11 +58,30 @@ This image shows the Serial monitor while running this code.
 
 ![Screenshot 2025-02-22 161109](https://github.com/user-attachments/assets/59627cf9-3229-4788-9b17-59cbf7593c4d)
 
-From the screenshot, we can see that the Artemis loop runs every 13ms which is a frequency of about 76 hz. The sensors run about every 98ms which is a frequency of 10.2 hz. The sensors run slower than the loop, so they are the limiting factor when running this code. 
+From the screenshot, we can see that the Artemis loop runs every 13ms which is a frequency of about 76 Hz. The sensors run about every 98ms which is a frequency of 10.2 Hz. The sensors run slower than the loop, so they are the limiting factor when running this code. 
 
 # Time vs Distance
 
+I modified the lab 2 code to incorporate the TOF sensors and the IMU together. I wrote a new case statement that collects TOF and IMU data for a set period, and sends this data to the computer. This is the code I used. It is the same IMU code used in the lab, modified to use the TOF sensors. 
+
+![image](https://github.com/user-attachments/assets/0887f2b8-2d56-477d-bddc-98c056b55c6e)
+
+![image](https://github.com/user-attachments/assets/0f7c8f22-e30e-43ac-bc37-772fdb0a86df)
+
+This shows the callback function on the Python side. 
+
+![image](https://github.com/user-attachments/assets/8a4a27c5-ca48-42f7-b58c-9dad90e3fc71)
+
+This graph shows the two TOF sensors' output over time. 
+
+![image](https://github.com/user-attachments/assets/17a49d87-ab96-4b84-a201-53480bebc22f)
+
+
 # Time vs Angle
+
+This graph shows the IMU data over time. It was collected from the code described in the previous section. 
+
+![image](https://github.com/user-attachments/assets/07329220-7543-46d6-a306-7447ccda84bf)
 
 # 5000 Levels Tasks
 
