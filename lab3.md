@@ -36,10 +36,15 @@ I initially read through the dataset to investigate the three different sensor m
 
 ![image](https://github.com/user-attachments/assets/f88bb1d1-6de9-41e1-a915-0459d39c09b2)
 
-
-
+These graphs demonstrate that the sensor is accurate from 25mm to 1000mm, slightly shorter than the datasheet's range of 1.3m. It had an accuracy between 10 - 20mm, which is higher than what the datasheet claims, but is probably affected by the errors in the testing setup as well. Overall, an accuracy of about 2cm is probably good for most of the required tasks. The sensors are very reliable, with a standard deviation of about 2mm. Near the end of the range, the accuracy decreases from about 15mm to 50mm. The reliability also decreases after about 1000mm, indicating that this sensor practically cannot be used for distances larger than a meter away, which is plenty of range for my tasks. 
 
 # 2 TOF Sensors + IMU
+
+I modified the code so I could use two TOF sensors simultaneously. I used the following routine to configure separate i2c addresses for each sensor. 
+
+![image](https://github.com/user-attachments/assets/255965e8-0cda-4f9c-9e56-480610824621)
+
+Using this, I successfully ran both sensors and printed their output to the screen, as shown in the following video. 
 
 # TOF Sensor Speed
 
