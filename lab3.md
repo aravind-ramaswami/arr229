@@ -87,6 +87,8 @@ This graph shows the IMU data over time. It was collected from the code describe
 
 # IR-based Sensors
 
+There are several different types of IR distance sensors. There are amplitude-based IR sensors, triangulation IR sensors, and IR TOF sensors. Amplitude-based IR sensors work by sending out IR pulses and comparing the amplitude of the sent signal to the received signal. From the ratio, the sensor can determine the distance of objects. They are very cheap and have a sampling rate, but they only work over short distances. Additionally, they are sensitive to ambient light, texture, and object color. Triangulation IR sensors work by sending out an IR pulse at a specific angle and measuring the angle of the received pulse. Based on this angle, the sensor computes the distance. These sensors are good up to 1m and are insensitive to surface texture or color, but they are bulky, expensive, and slow. IR TOF sensors 
+
 # TOF Sensor Sensitivity to Color/Textures
 
 
