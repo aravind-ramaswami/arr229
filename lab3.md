@@ -93,7 +93,12 @@ There are several different types of IR distance sensors. There are amplitude-ba
 
 I tested out the TOF sensors for objects of different colors. I evaluated my sensor against blue, black, and white. Note, in the graph, the "red" marker symbolizes white. I measured 3 distances (averaged 40 values for each one) for each color and plotted them against each other and the true distance. 
 
+![image](https://github.com/user-attachments/assets/1e7781a3-6f4b-4fe6-ae39-ed23fa2d5269)
 
-From the plot, 
+![image](https://github.com/user-attachments/assets/130a00fd-c1dd-4406-8897-1f240aaa4c53)
+
+![image](https://github.com/user-attachments/assets/d504b5bf-e18e-44fa-80d0-db890a8f3aea)
+
+From the plot, we can see that the TOF sensor is consistent and accurate across different colors. 
 
 
