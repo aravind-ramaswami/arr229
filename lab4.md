@@ -4,6 +4,12 @@ In this lab, I added two motor drivers to the car, removed the existing control 
 
 # Prelab
 
+I used pins 0,1,4,5 to control the motor drivers. I used stranded wires since they are more resistant to breaking than solid core wires. I used separate batteries for the Artemis and motor drivers to maximize the available current for the motor drivers. Additionally, the motor drivers require a lot of current, so separate batteries for the Artemis and motor drivers will maximize the robot's lifetime. 
+
+Wiring Diagram
+
+--Insert Wiring Diagram--
+
 # Lab Tasks
 
 # Power Supply & Oscilloscope
