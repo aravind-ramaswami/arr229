@@ -78,7 +78,7 @@ I placed the car on the lab table and slowly incremented the PWM values until th
 
 For turning, I drove one side forward and the other side backward to execute a turn. I found that a value of 100 on the left motor and 90 on the right motor was necessary to just start turning. This was higher than going forward because the car has to overcome more friction to turn then go straight. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M1VHP-7PYZE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/atTqy-LJ62I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Straight Line
 
@@ -102,7 +102,7 @@ After getting the car to move in a straight line, I programmed an open-loop proc
 
 I measured the frequency of the analogWrite commands using an oscilloscope. I found that the frequency was 186Hz. This frequency was enough to run the motors (based on experimental observations). If the PWM signal was faster, you could achieve finer control over the car for high-speed maneuvers. 
 
---Insert Image--
+![PXL_20250304_082301995](https://github.com/user-attachments/assets/b58c6d29-30a0-4a7e-9046-4197080c9aa2)
 
 # PWM Limits revisited
 
