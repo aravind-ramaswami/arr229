@@ -22,13 +22,7 @@ I used this code to generate the PWM signals for one of my motor drivers.
 
 This is the oscilloscope output.
 
---Insert Video--
-
-I repeated this for the 2nd motor driver with the following code and oscilloscope output.
-
-![image](https://github.com/user-attachments/assets/206cf853-1e87-450f-8345-e3bb37ad2b68)
-
---Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/10rf_lWhFPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Controlling Motors
 
@@ -44,7 +38,8 @@ I repeated this process for the 2nd motor driver (to confirm its functionality).
 
 ![image](https://github.com/user-attachments/assets/35221941-cd53-45e8-9b9b-1c834e91a1df)
 
---Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J3eVWfjWoRw?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 # Battery Power
 
