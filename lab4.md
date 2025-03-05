@@ -24,3 +24,20 @@ I repeated this for the 2nd motor driver with the following code and oscilloscop
 
 --Insert Video--
 
+# Controlling Motors
+
+I soldered the motor driver outputs into the motors, following my wiring diagram. I powered the motor drivers using the same external power supply with the current limit set to 2.4 A. 
+
+I used one motor driver to control the motors on its side. The code and video are shown  below. 
+
+![image](https://github.com/user-attachments/assets/7e6a1d6a-c5be-421e-b9e8-263b6c5bf656)
+
+-- Insert Video--
+
+I repeated this process for the 2nd motor driver (to confirm its functionality).
+
+![image](https://github.com/user-attachments/assets/35221941-cd53-45e8-9b9b-1c834e91a1df)
+
+--Insert Video--
+
+
