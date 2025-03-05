@@ -13,4 +13,4 @@ Hello, my name is Aravind Ramaswami and I am from Tucson, Arizona. I am a senior
 
 [Lab 3: TOF](/lab3.md)
 
-
+[Lab 4: Motors and Open Loop Control](/lab4.md)
