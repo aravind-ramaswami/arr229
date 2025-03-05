@@ -8,7 +8,7 @@ I used pins 0,1,4,5 to control the motor drivers. I used stranded wires since th
 
 Wiring Diagram
 
---Insert Wiring Diagram--
+![image](https://github.com/user-attachments/assets/1af26e42-4e35-4191-ac1b-62ae6792f475)
 
 # Lab Tasks
 
