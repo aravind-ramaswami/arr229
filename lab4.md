@@ -40,4 +40,30 @@ I repeated this process for the 2nd motor driver (to confirm its functionality).
 
 --Insert Video--
 
+# Battery Power
+
+I used the battery power to drive each motor driver separately. I used the same codes in the previous section since the only change was the power source. 
+
+One side:
+
+--Insert Video--
+
+Other side:
+
+--Insert Video--
+
+# Assemble Everything
+
+# PWM Lower Limit
+
+# Straight Line
+
+# Open Loop 
+
+# 5000 Level Tasks
+
+# Analog Write
+
+# PWM Limits revisted
+
 
