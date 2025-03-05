@@ -66,6 +66,9 @@ I assembled everything into my car, using electrical tape and double-sided tape 
 
 
 
+![image](https://github.com/user-attachments/assets/97e9f146-35a5-4a33-88b9-932008b9531b)
+
+
 
 After assembling everything, I programmed the car to drive forward for a few seconds and then stop. 
 
