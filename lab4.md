@@ -106,7 +106,7 @@ I measured the frequency of the analogWrite commands using an oscilloscope. I fo
 
 # PWM Limits revisited
 
-I tried to determine the lowest PWM value for which the robot would continue to drive forward. I set an initial PWM signal to start the robot, let it run for 1.5 seconds, and then supplied a lower PWM signal. I lowered the value until the robot stopped. The lowest value I got was 60, which is higher than expected, but could be because of extra wheel friction, weaker motors, or a depleted battery. 
+I tried to determine the lowest PWM value for which the robot would continue to drive forward. I set an initial PWM signal to start the robot, let it run for 1.5 seconds, and then supplied a lower PWM signal. I lowered the value until the robot stopped. The lowest value I got was 60, which is higher than expected, but could be because of extra wheel friction, weaker motors, or a depleted battery. Additionally, the car quickly settled on this lower speed. 
 
 ![image](https://github.com/user-attachments/assets/de390dcc-fffb-45e4-b504-d8db8cb3e3f1)
 
