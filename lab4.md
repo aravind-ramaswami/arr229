@@ -62,7 +62,10 @@ Other side:
 
 I assembled everything into my car, using electrical tape and double-sided tape to secure my components. I decided to place TOF sensors on the front and back of the car. Additionally, I drilled an additional hole in the battery compartment so I could have both batteries in the same compartment. The image below shows the assembled car. 
 
--- Insert Labeled Images--
+![image](https://github.com/user-attachments/assets/1be88986-e4e1-4d9f-891a-206fb8110619)
+
+
+
 
 After assembling everything, I programmed the car to drive forward for a few seconds and then stop. 
 
