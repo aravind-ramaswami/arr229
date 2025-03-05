@@ -60,6 +60,14 @@ Other side:
 
 # Assemble Everything
 
+I assembled everything into my car, using electrical tape and double-sided tape to secure my components. I decided to place TOF sensors on the front and back of the car. Additionally, I drilled an additional hole in the battery compartment so I could have both batteries in the same compartment. The image below shows the assembled car. 
+
+-- Insert Labeled Images--
+
+After assembling everything, I programmed the car to drive forward for a few seconds and then stop. 
+
+-- Insert Video--
+
 # PWM Lower Limit
 
 # Straight Line
