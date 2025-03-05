@@ -32,7 +32,8 @@ I used one motor driver to control the motors on its side. The code and video ar
 
 ![image](https://github.com/user-attachments/assets/7e6a1d6a-c5be-421e-b9e8-263b6c5bf656)
 
--- Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JEH6hXHR7c0?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 I repeated this process for the 2nd motor driver (to confirm its functionality).
 
