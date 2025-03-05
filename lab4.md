@@ -74,7 +74,7 @@ After assembling everything, I programmed the car to drive forward for a few sec
 
 I placed the car on the lab table and slowly incremented the PWM values until the car barely started to move. For straight, I found that a minimum PWM of 70 was needed to move forward.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R_G2NwVxcnY?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For turning, I drove one side forward and the other side backward to execute a turn. I found that a value of 100 on the left motor and 90 on the right motor was necessary to just start turning. This was higher than going forward because the car has to overcome more friction to turn then go straight. 
 
@@ -110,5 +110,5 @@ I tried to determine the lowest PWM value for which the robot would continue to 
 
 ![image](https://github.com/user-attachments/assets/de390dcc-fffb-45e4-b504-d8db8cb3e3f1)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t7Oubo77bok?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
