@@ -64,7 +64,7 @@ I assembled everything into my car, using electrical tape and double-sided tape 
 
 ![image](https://github.com/user-attachments/assets/1be88986-e4e1-4d9f-891a-206fb8110619)
 
-
+![image](https://github.com/user-attachments/assets/249d782f-2f7a-4522-9022-463614cceef0)
 
 ![image](https://github.com/user-attachments/assets/97e9f146-35a5-4a33-88b9-932008b9531b)
 
