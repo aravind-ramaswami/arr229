@@ -98,6 +98,15 @@ After getting the car to move in a straight line, I programmed an open-loop proc
 
 # Analog Write
 
+I measured the frequency of the analogWrite commands using an oscilloscope. I found that the frequency was 186Hz. This frequency was enough to run the motors (based on experimental observations). If the PWM signal was faster, you could achieve finer control over the car for high-speed maneuvers. 
+
+--Insert Image--
+
 # PWM Limits revisited
 
+I tried to determine the lowest PWM value for which the robot would continue to drive forward. I set an initial PWM signal to start the robot, let it run for 1.5 seconds, and then supplied a lower PWM signal. I lowered the value until the robot stopped. The lowest value I got was 60, which is higher than expected, but could be because of extra wheel friction, weaker motors, or a depleted battery. 
+
+![image](https://github.com/user-attachments/assets/de390dcc-fffb-45e4-b504-d8db8cb3e3f1)
+
+--Insert Video--
 
