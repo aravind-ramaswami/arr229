@@ -48,11 +48,11 @@ I used the battery power to drive each motor driver separately. I used the same 
 
 One side:
 
---Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1wa9TMYpU7A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Other side:
 
---Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Assemble Everything
 
@@ -68,17 +68,17 @@ I assembled everything into my car, using electrical tape and double-sided tape 
 
 After assembling everything, I programmed the car to drive forward for a few seconds and then stop. 
 
--- Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # PWM Lower Limit
 
 I placed the car on the lab table and slowly incremented the PWM values until the car barely started to move. For straight, I found that a minimum PWM of 70 was needed to move forward.
 
--- Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For turning, I drove one side forward and the other side backward to execute a turn. I found that a value of 100 on the left motor and 90 on the right motor was necessary to just start turning. This was higher than going forward because the car has to overcome more friction to turn then go straight. 
 
--- Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Straight Line
 
@@ -86,7 +86,7 @@ My car initially did not move in a straight line, so I had to add a calibration 
 
 ![image](https://github.com/user-attachments/assets/5b2c8f49-e282-43f5-ae77-cf75cf99f7ae)
 
---Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Open Loop 
 
@@ -94,7 +94,7 @@ After getting the car to move in a straight line, I programmed an open-loop proc
 
 ![image](https://github.com/user-attachments/assets/783dfbb4-d460-4b94-bd53-2f7b98ad53ee)
 
---Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # 5000 Level Tasks
 
@@ -110,5 +110,5 @@ I tried to determine the lowest PWM value for which the robot would continue to 
 
 ![image](https://github.com/user-attachments/assets/de390dcc-fffb-45e4-b504-d8db8cb3e3f1)
 
---Insert Video--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
