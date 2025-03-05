@@ -78,7 +78,7 @@ I placed the car on the lab table and slowly incremented the PWM values until th
 
 For turning, I drove one side forward and the other side backward to execute a turn. I found that a value of 100 on the left motor and 90 on the right motor was necessary to just start turning. This was higher than going forward because the car has to overcome more friction to turn then go straight. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M1VHP-7PYZE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Straight Line
 
@@ -86,7 +86,7 @@ My car initially did not move in a straight line, so I had to add a calibration 
 
 ![image](https://github.com/user-attachments/assets/5b2c8f49-e282-43f5-ae77-cf75cf99f7ae)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QUrOptUJL00?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Open Loop 
 
@@ -94,7 +94,7 @@ After getting the car to move in a straight line, I programmed an open-loop proc
 
 ![image](https://github.com/user-attachments/assets/783dfbb4-d460-4b94-bd53-2f7b98ad53ee)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uPKTonFRb08?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # 5000 Level Tasks
 
