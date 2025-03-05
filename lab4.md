@@ -70,9 +70,27 @@ After assembling everything, I programmed the car to drive forward for a few sec
 
 # PWM Lower Limit
 
+I placed the car on the lab table and slowly incremented the PWM values until the car barely started to move. For straight, I found that a minimum PWM of 70 was needed to move forward.
+
+-- Insert Video--
+
+For turning, I drove one side forward and the other side backward to execute a turn. I found that a value of 100 on the left motor and 90 on the right motor was necessary to just start turning. This was higher than going forward because the car has to overcome more friction to turn then go straight. 
+
+-- Insert Video--
+
 # Straight Line
 
+My car initially did not move in a straight line, so I had to add a calibration factor (increased the right motor speed) to ensure it moved in a straight line. Here is the code and the video.
+
+![image](https://github.com/user-attachments/assets/5b2c8f49-e282-43f5-ae77-cf75cf99f7ae)
+
+--Insert Video--
+
 # Open Loop 
+
+After getting the car to move in a straight line, I programmed an open-loop procedure for it to follow. I sent the command via python using ble. 
+
+--Insert Video--
 
 # 5000 Level Tasks
 
