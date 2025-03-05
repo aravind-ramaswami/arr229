@@ -88,7 +88,9 @@ My car initially did not move in a straight line, so I had to add a calibration 
 
 # Open Loop 
 
-After getting the car to move in a straight line, I programmed an open-loop procedure for it to follow. I sent the command via python using ble. 
+After getting the car to move in a straight line, I programmed an open-loop procedure for it to follow. I sent the command using ble in Python. 
+
+![image](https://github.com/user-attachments/assets/783dfbb4-d460-4b94-bd53-2f7b98ad53ee)
 
 --Insert Video--
 
@@ -96,6 +98,6 @@ After getting the car to move in a straight line, I programmed an open-loop proc
 
 # Analog Write
 
-# PWM Limits revisted
+# PWM Limits revisited
 
 
