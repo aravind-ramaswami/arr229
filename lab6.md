@@ -60,23 +60,21 @@ Here are some videos of the PID loop working and the corresponding data in the J
 
 Run 1: initial = 0, setpoint = -160, final angle = -162.74
 
---insert video here
-a
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0Enht-ZLk4U?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Run 2: Initial = 0, setpoint = 30, final angle = 32.7
 
---insert video here
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_OTk-5bVp1I?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Run 3: Initial = 0, setpoint = - 30, final angle = -34.7
 
---insert video here--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YkQFPm0epak?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Run 4: initial = 0, setpoint = -90, final angle = -92.5
 
---insert video here--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/76U9s_rmXx0?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In this video, the robot returns to its starting point after receiving a disturbance input. 
-
---insert video here--
+Jupyter Notebook data:
 
 Run 1: initial = 0, setpoint = -160, final angle = -162.74
 
