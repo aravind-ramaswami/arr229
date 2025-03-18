@@ -48,19 +48,19 @@ Here are several videos of robots working from different distances on a carpet s
 
 Run 1:
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BjbzZrlnDKk?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Run 2:
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k9sfnMmPVjE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Run 3:
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/APkXB0AVVzA?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Run 4:
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8azDjgG3cKY?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Here is the corresponding data sent to the Jupyter Notebook for these runs. We can see that the maximum speed achieved on the last run was 1.417 m/s.
 
@@ -108,6 +108,8 @@ Linear Extrapolation:
 This video shows a successful run with linear extrapolation working. 
 
 Video of it working:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2iXlc_S5TB8?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Data:
 
