@@ -100,6 +100,7 @@ Run 4: initial = 0, setpoint = -90, final angle = -92.5
 
 ![o_t4_n_m_m](https://github.com/user-attachments/assets/71747e5d-68d4-4088-8c0b-167425198b24)
 
+Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from last lab). The loop frequency was about x hz and the DMP frequency is y hz, so they are much closer than the TOF sensor. This will lead to a better controller. 
 
 # 5000 Level Tasks
 
