@@ -4,11 +4,17 @@
 
 I used the same Bluetooth setup described in LAB 5 to send the data here. I slightly modified some of the commands to send back angle data instead of orientation data. These commands allow me to start/stop the PID loop, receive data, and change the PID gains even while the robot is running. This will be useful in future labs. I also reset the DMP (discussed below) queue values whenever I stopped the PID loop and initialized the DMP angle (to start correcting for noise and bias) whenever the PID loop was started. 
 
---insert images here--
+![image](https://github.com/user-attachments/assets/6ee609b7-8fa3-4211-91bc-4622cc2664aa)
+
+![image](https://github.com/user-attachments/assets/808a800e-eac9-458b-914c-ae8e52770640)
+
+![image](https://github.com/user-attachments/assets/3893c8c7-7295-4a7f-a56a-6fe83e5ee95b)
+
 
 Additionally, I set up a command to change the setpoint while the car is running. While I did not use this for this lab, it will be useful in the future to be able to send a constantly changing setpoint. 
 
---insert image here--
+![image](https://github.com/user-attachments/assets/58a0afb5-c9fd-41a4-88d1-2982147ab020)
+
 
 # Lab Tasks
 
@@ -16,11 +22,11 @@ Additionally, I set up a command to change the setpoint while the car is running
 
 The equation for the PID loop is identical to the previous lab:
 
---insert image here--
+![image](https://github.com/user-attachments/assets/4073f73f-609b-4a52-a1d4-0544f290199c)
 
 In this case, the target is a specific yaw value, which is a rotation about the z-axis given how I set up my IMU data. Similar to the last lab, I decided to implement a full PID controller to maximize the performance and give myself an extra challenge. 
 
-I followed the advice given by Stephan Wagner and used the DMP to calculate the yaw values. The DMP gives a noise-resistant, bias-correcting measurement of the orientation of the IMU. It's sampling rate is also very high, ensuring a good controller performance. I followed the setup instructions described by Stephan to set up my DMP. I modified the files according to the Artemis Lab 6 DMP example script to enable the DMP and setup the following visualization. 
+I followed the advice given by Stephan Wagner and used the DMP to calculate the yaw values. The DMP gives a noise-resistant, bias-correcting measurement of the orientation of the IMU. It's sampling rate is also very high, ensuring a good controller performance. I followed the setup instructions described by Stephan to set up my DMP. I modified the files according to the Artemis Lab 6 DMP example script to enable the DMP and set up the following visualization. 
 
 This video shows the DMP successfully working. 
 
@@ -28,27 +34,27 @@ This video shows the DMP successfully working.
 
 I added code to the setup function which initialized the DMP. 
 
---insert image here--
+![image](https://github.com/user-attachments/assets/76817842-7e48-42c0-96d7-6b87dcfa2287)
 
-I implemented a function that gave the yaw value outputs from the DMP data.
+I implemented a function (based on Stephan Wagner's code) that gave the yaw value outputs from the DMP data.
 
---insert image here--
+![image](https://github.com/user-attachments/assets/16767820-92ec-4b5f-8762-5e2023a9a286)
 
 After setting up the DMP, I started to design my controller. I used a very similar code to the last lab, but I had to implement a low-pass filter for the derivative term. I did not need to implement any derivative kick protection as the low pass filter successfully eliminated most of the spikes in the derivative term. The low pass filter will also prevent any rapid spikes in the control input when the setpoint is changed. Since the DMP gives discrete values, it makes to differentiate them. I also implemented an integrator windup protection to prevent the car from spinning out of control. I used a very similar function to drive the robot given the output from the controller. Similar to the last lab, I accounted for the, now higher, deadband for the motor. 
 
 PID loop:
 
--insert image here--
+![image](https://github.com/user-attachments/assets/5094cc9c-dcfb-4c4f-9994-4d8febe556f1)
 
 drive motors:
 
---insert image here--
+![image](https://github.com/user-attachments/assets/7b3a66cc-9356-465a-b085-89c2c9179c57)
 
 main loop:
 
---insert image here--
+![image](https://github.com/user-attachments/assets/ac1c9d2b-2ec8-4469-aa0a-fafb157522ee)
 
-I tuned the PID loop to get these gains:
+I tuned the PID loop to get these gains: kp = 0.04, ki = 0.003, kd = 0.01
 
 Here are some videos of the PID loop working and the corresponding data in the Jupyter Notebook:
 
