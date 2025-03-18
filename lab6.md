@@ -80,20 +80,27 @@ In this video, the robot returns to its starting point after receiving a disturb
 
 Run 1: initial = 0, setpoint = -160, final angle = -162.74
 
---insert image here--
+![o1n_a](https://github.com/user-attachments/assets/77cfe32c-2291-4066-b2f9-94c671c0946d)
+
+![o1n_m](https://github.com/user-attachments/assets/380aa29a-4b14-4d3d-b40f-80c59e5c4b71)
 
 Run 2: Initial = 0, setpoint = 30, final angle = 32.7
 
---insert video here--
+![o2n_a](https://github.com/user-attachments/assets/6612908e-a133-4598-8890-15efdbf2a753)
+
+![o2n_m](https://github.com/user-attachments/assets/bc72d7e4-f601-4bd4-89e3-aefbf693a4e2)
 
 Run 3: Initial = 0, setpoint = - 30, final angle = -34.7
 
---insert image here--
+![o_t3_n](https://github.com/user-attachments/assets/207cede5-f844-4fc9-98fe-d66cadd9231f)
+
+![o_3n_m](https://github.com/user-attachments/assets/89182580-d625-4d29-9bfe-edd8d0a496bd)
 
 Run 4: initial = 0, setpoint = -90, final angle = -92.5
 
---insert image here--
+![o_t4_n_m](https://github.com/user-attachments/assets/9522787c-527f-4c61-9f8f-6c7f6e89d8b1)
 
+![o_t4_n_m_m](https://github.com/user-attachments/assets/71747e5d-68d4-4088-8c0b-167425198b24)
 
 
 # 5000 Level Tasks
