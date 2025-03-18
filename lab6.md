@@ -44,7 +44,7 @@ After setting up the DMP, I started to design my controller. I used a very simil
 
 PID loop:
 
-![image](https://github.com/user-attachments/assets/5094cc9c-dcfb-4c4f-9994-4d8febe556f1)
+![image](https://github.com/user-attachments/assets/5758e83e-7ef8-44d2-9d99-5d476bddcbb5)
 
 drive motors:
 
@@ -54,11 +54,23 @@ main loop:
 
 ![image](https://github.com/user-attachments/assets/ac1c9d2b-2ec8-4469-aa0a-fafb157522ee)
 
-I tuned the PID loop to get these gains: kp = 0.04, ki = 0.003, kd = 0.01
+I tuned the PID loop to get these gains: kp = 0.04, ki = 0.003, kd = 0.02
 
-Here are some videos of the PID loop working and the corresponding data in the Jupyter Notebook:
+Here are some videos of the PID loop working and the corresponding data in the Jupyter Notebook. In some of these plots, the angle jumps from -180 to 180, this is because of the range of the DMP. You can also note that the car settles on the correct value very fast, often within 2 seconds. I paid a price that the car often overshoots the target before correcting back. I valued the quick settling time over low overshoot because an overshoot in angle is not very harmful since the car quickly corrects back to the right position. In practice, this means that the car will quickly get to the correct angle. 
+
+Run 1: initial = 0, setpoint = -160, final angle = -162.74
 
 --insert video here
+
+Run 2: Initial = 0, setpoint = 30, final angle = 32.7
+
+--insert video here
+
+Run 3: Initial = 0, setpoint = - 30, final angle = -34.7
+
+--insert video here--
+
+Run 4: initial = 0, setpoint = -90, final angle = -92.5
 
 --insert video here--
 
@@ -66,7 +78,19 @@ In this video, the robot returns to its starting point after receiving a disturb
 
 --insert video here--
 
+Run 1: initial = 0, setpoint = -160, final angle = -162.74
+
 --insert image here--
+
+Run 2: Initial = 0, setpoint = 30, final angle = 32.7
+
+--insert video here--
+
+Run 3: Initial = 0, setpoint = - 30, final angle = -34.7
+
+--insert image here--
+
+Run 4: initial = 0, setpoint = -90, final angle = -92.5
 
 --insert image here--
 
