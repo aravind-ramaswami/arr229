@@ -30,9 +30,9 @@ This controller is very versatile because the three separate gains allow the con
 
 I developed a full PID controller to achieve the best possible position control over my robot. I initially wanted to use the short mode distance (since it has the highest sampling rate) but quickly realized that it would not give accurate measurements at 2 and 3m. I had to use the long mode (20 Hz frequency) to get accurate distance measurements but sacrificed sensor speed. This was a necessary tradeoff because my robot had to work beyond 1 meter, exceeding the range of the short-mode distance sensor. I built my PID control in two separate functions.
 
-One function (PID_Control) took the setpoint and the robot’s current position as inputs and returned a motor value between 0 and 1. The PID gains were scaled so the maximum output they would give was approximately 1 when the robot was at the maximum distance (starting position) from the wall, and zero when it was exactly at the desired position. Additionally, I accounted for the motor deadband region that I determined in Lab 4 so the PWM values were always between max and min, ensuring the robot would move with small PID gain values. I based this approach on Stephan Wagner’s and Anunth Ramaswami’s approach. I also added windup protection for the integrator term. This was tuned experimentally, but I caped the maximum integrator output at 20% of the maximum motor input. This prevents the integral term from dominating the control signal and driving the robot into the wall. I added a detivative term but did not need to implement a low pass filter or deal with a derivative kick. My performance with the raw derivative term is sufficient and I did not need to add anything more. 
+One function (PID_Control) took the setpoint and the robot’s current position as inputs and returned a motor value between 0 and 1. The PID gains were scaled so the maximum output they would give was approximately 1 when the robot was at the maximum distance (starting position) from the wall, and zero when it was exactly at the desired position. Additionally, I accounted for the motor deadband region that I determined in Lab 4 so the PWM values were always between max and min, ensuring the robot would move with small PID gain values. I based this approach on Stephan Wagner’s and Anunth Ramaswami’s approach. I also added windup protection for the integrator term. This was tuned experimentally, but I caped the maximum integrator output at 5% of the maximum motor input. This prevents the integral term from dominating the control signal and driving the robot into the wall. I added a detivative term but did not need to implement a low pass filter or deal with a derivative kick. My performance with the raw derivative term is sufficient and I did not need to add anything more. 
 
-![image](https://github.com/user-attachments/assets/3863b342-927b-464a-93fa-7597fe2994e1)
+![image](https://github.com/user-attachments/assets/f6fc515d-0b63-41e8-b050-2b9bff2d9c27)
 
 The 2nd function (drive_motors) took the motor value and direction as inputs and supplied the corresponding PWM signal to the motor. This function accounted for the deadband region of the robot’s wheels when computing the PWM value from the motor input. 
 
@@ -58,10 +58,6 @@ Run 3:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/APkXB0AVVzA?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Run 4:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8azDjgG3cKY?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Here is the corresponding data sent to the Jupyter Notebook for these runs. We can see that the maximum speed achieved on the last run was 1.417 m/s.
 
 Run 1:
@@ -81,12 +77,6 @@ Run 3:
 ![t3_d](https://github.com/user-attachments/assets/9d12d4ff-9749-45a3-91b6-fe074349328a)
 
 ![t3_c](https://github.com/user-attachments/assets/f1fb60fd-183a-4be9-8aa8-1ed568c80d90)
-
-Run 4:
-
-![t4_d](https://github.com/user-attachments/assets/e2123c55-8481-4f84-a523-0cb72de4eaba)
-
-![t4_c](https://github.com/user-attachments/assets/40d9826d-f98f-4962-a492-c8b28a684589)
 
 The frequency of the TOF sensors was determined by computing the difference between successive time measurements (since they were synced to TOF values). I got a frequency of 20 Hz, which makes sense given long mode. This is slow, but my controller works well enough even with the low speed. 
 
@@ -117,6 +107,15 @@ Data:
 
 # 5000 Level Task
 
+Integrator windup is necessary to prevent the robot from crashing into a wall because the integrator term gets too high. See the code snippet below for my implementation of windup protection. 
+
+![image](https://github.com/user-attachments/assets/a475ccbd-2fbc-43c0-ab1b-f395e1bfca0c)
+
+This video shows the robot working with integrator windup enabled. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8azDjgG3cKY?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Overall, this lab taught me how to implement a PID loop on physical hardware. 
 
 
 
