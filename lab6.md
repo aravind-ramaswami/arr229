@@ -76,6 +76,7 @@ In this video, the robot returns to its starting point after receiving a disturb
 
 I implemented windup protection to prevent the car from rapidly spinning out of control. The videos above show the robot with integrator windup protection enabled. The image below shows how I implemented integrator windup protection. I chose to limit the error term to 5% of the maximum control gain to prevent the car from spiraling out of control. 
 
---insert image--
+![image](https://github.com/user-attachments/assets/e2edc3fd-9abc-4429-a996-091838498a2f)
+
 
 
