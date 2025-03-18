@@ -42,40 +42,76 @@ The main loop code updates the robot’s position from the distance sensors and 
 
 ![image](https://github.com/user-attachments/assets/f66fa6c4-3f0d-48e3-995f-2cc0eff5aa40)
 
-I experimentally tuned my gains by setting the I and D terms to zero and only using P control. After P control was working, I added very small gains for I and D. The final gains I used were:
+I experimentally tuned my gains by setting the I and D terms to zero and only using P control. After P control was working, I added very small gains for I and D. The final gains I used were: kp = 0.00025, ki = 0.0000001, kd = 0.0001.
 
 Here are several videos of robots working from different distances on a carpet surface.
 
 Run 1:
 
+
+
 Run 2:
+
+
 
 Run 3:
 
+
+
 Run 4:
+
+
 
 Here is the corresponding data sent to the Jupyter Notebook for these runs. We can see that the maximum speed achieved on the last run was 1.417 m/s.
 
 Run 1:
+
 ![t1_d](https://github.com/user-attachments/assets/b413bb75-a0b5-41c3-b0e3-5095fff20484)
+
 ![t1_c](https://github.com/user-attachments/assets/2e4347a8-a792-471a-8810-8453ce0f386e)
 
 Run 2:
+
 ![t2_c](https://github.com/user-attachments/assets/e3472d97-df8e-4b5b-bf84-59f5717bf7b4)
+
 ![t2_d](https://github.com/user-attachments/assets/d7c77e4d-59b8-4401-b8f8-296866c436fb)
 
 Run 3:
+
 ![t3_d](https://github.com/user-attachments/assets/9d12d4ff-9749-45a3-91b6-fe074349328a)
+
 ![t3_c](https://github.com/user-attachments/assets/f1fb60fd-183a-4be9-8aa8-1ed568c80d90)
 
 Run 4:
+
 ![t4_d](https://github.com/user-attachments/assets/e2123c55-8481-4f84-a523-0cb72de4eaba)
+
 ![t4_c](https://github.com/user-attachments/assets/40d9826d-f98f-4962-a492-c8b28a684589)
 
 The frequency of the TOF sensors was determined by computing the difference between successive time measurements (since they were synced to TOF values). I got a frequency of 20 Hz, which makes sense given long mode. This is slow, but my controller works well enough even with the low speed. 
 
 
 # Extrapolation
+
+From above, I measured the frequency of my PID loop at 20 Hz. I updated my PID loop to use the previous data if new sensor data was not ready. After this, the PID control and sensor input were decoupled. The new loop speed was 100 Hz, far faster than the original sensor speed. Next, I modified the code so it used the extrapolated data if the new sensor data was not ready. This shows the updated main loop code and linear extrapolation code. 
+
+Main Loop:
+
+![image](https://github.com/user-attachments/assets/52e02d81-e233-43ca-9cd7-5d08d6382d7c)
+
+![image](https://github.com/user-attachments/assets/2eba3503-060a-4798-9694-0df830baca1b)
+
+Linear Extrapolation:
+
+![image](https://github.com/user-attachments/assets/50b4246f-8dd9-4493-bc24-607bcbb71366)
+
+This video shows a successful run with linear extrapolation working. 
+
+Video of it working:
+
+Data:
+
+![image](https://github.com/user-attachments/assets/a3a5f23e-8967-4c80-9d01-a3007f918941)
 
 # 5000 Level Task
 
