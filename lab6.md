@@ -18,7 +18,7 @@ Additionally, I set up a command to change the setpoint while the car is running
 
 # Lab Tasks
 
-# Orientation Control
+# Controller Design
 
 The equation for the PID loop is identical to the previous lab:
 
@@ -32,7 +32,7 @@ This video shows the DMP successfully working.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/irU43pQOWpE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I added code to the setup function which initialized the DMP. 
+I added code to the setup function which initialized the DMP. This sets the DMP to poll the queue at 1.1 kHz without a maximum rotational rate of 2000 degrees/second. This should be more than enough for my car given its hardware limitations. 
 
 ![image](https://github.com/user-attachments/assets/76817842-7e48-42c0-96d7-6b87dcfa2287)
 
@@ -53,6 +53,8 @@ drive motors:
 main loop:
 
 ![image](https://github.com/user-attachments/assets/ac1c9d2b-2ec8-4469-aa0a-fafb157522ee)
+
+# Controller Testing
 
 I tuned the PID loop to get these gains: kp = 0.04, ki = 0.0001, kd = 0.01
 
@@ -93,6 +95,7 @@ Run 3: Initial = 0, setpoint = 90, final angle = 88.74
 ![lab 6_90_y](https://github.com/user-attachments/assets/3e610867-16cb-4207-b65c-fdb7e70de5bb)
 ![lab 6_90_m](https://github.com/user-attachments/assets/5f8274f7-eb81-4791-9455-82299fe1c68c)
 
+# Sampling Rate Discussion
 
 Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from the last lab). The loop frequency was about 100 Hz and the DMP frequency was 90 Hz, so they are much closer than the TOF sensor. The loop was still faster than the DMP, but the difference was smaller than with the TOF sensor. This will lead to a better controller and performance. 
 
@@ -108,5 +111,5 @@ I would want to investigate adaptive gains so that the controller gains would au
 
 # Conclusion
 
-I really enjoyed this lab and the previous lab, as they gave me hands-on experience in developing and implementing a PID controller on a physical robot. It was also cool to see the response curves predicted by control theory appear in my data. I am excited to use these controllers in future labs. Additionally, I would also like to thank Anunth Ramaswami for helping me debug my PID controller and tune its gains. 
+I enjoyed this lab and the previous lab, as they gave me hands-on experience in developing and implementing a PID controller on a physical robot. It was also cool to see the response curves predicted by control theory appear in my data. I am excited to use these controllers in future labs. Additionally, I would also like to thank Anunth Ramaswami for helping me debug my PID controller and tune its gains. 
 
