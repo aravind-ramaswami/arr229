@@ -56,7 +56,7 @@ main loop:
 
 I tuned the PID loop to get these gains: kp = 0.04, ki = 0.0001, kd = 0.01
 
-Here are some videos of the PID loop working and the corresponding data in the Jupyter Notebook. In some of these plots, the angle jumps from -180 to 180, this is because of the range of the DMP. You can see that the steady-state error of the car is very low and there is very little overshoot in my controller outputs.
+Here are some videos of the PID loop working and the corresponding data in the Jupyter Notebook. You can see that the steady-state error of the car is very low and there is very little overshoot in my controller outputs.
 
 Run 1: initial = 0, setpoint = 60, final angle = 61.74
 
@@ -94,11 +94,11 @@ Finally, from this data, we can see that the DMP's frequency is far faster than 
 
 I implemented windup protection to prevent the car from rapidly spinning out of control. The videos above show the robot with integrator windup protection enabled. The image below shows how I implemented integrator windup protection. I chose to limit the error term to 10% of the maximum control gain to prevent the car from spiraling out of control. The linked videos in this lab demonstrate the controller with integrator windup protection enabled. Without enabling it, the car will rapidly spin. 
 
-![image](https://github.com/user-attachments/assets/e2edc3fd-9abc-4429-a996-091838498a2f)
+![image](https://github.com/user-attachments/assets/616ae0f0-86be-4818-a6a7-7c41418e1f65)
 
 # Future Improvements
 
-I would want to investigate adaptive gains, so that the controller gains would automatically adjust for different initial setpoints, floor conditions, or battery voltage levels. I was unable to implement this because of time constraints, but I would like to investigate it in the future. 
+I would want to investigate adaptive gains so that the controller gains would automatically adjust for different initial setpoints, floor conditions, or battery voltage levels. I was unable to implement this because of time constraints, but I would like to investigate it in the future. Additionally, I would like to combine the linear and orientation pid controllers so the car can be driven to a particular waypoint. 
 
 
 
