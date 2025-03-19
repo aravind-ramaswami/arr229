@@ -16,3 +16,5 @@ Hello, my name is Aravind Ramaswami and I am from Tucson, Arizona. I am a senior
 [Lab 4: Motors and Open Loop Control](/lab4.md)
 
 [Lab 5: Linear PID control and Linear interpolation](/lab5.md)
+
+[Lab 6: Orientation PID](/lab6.md)
