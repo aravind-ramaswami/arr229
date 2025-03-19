@@ -97,7 +97,7 @@ Run 3: Initial = 0, setpoint = 90, final angle = 88.74
 
 # Sampling Rate Discussion
 
-Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from the last lab). The loop frequency was about 100 Hz and the DMP frequency was 90 Hz, so they are much closer than the TOF sensor. The loop was still faster than the DMP, but the difference was smaller than with the TOF sensor. This will lead to a better controller and performance. 
+Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from the last lab). The loop frequency was about 100 Hz and the DMP frequency was 90 Hz, so they are much closer together. The loop was still faster than the DMP, but the difference was smaller than with the TOF sensor. This will lead to a better controller and performance. It also minimizes the need for linear extrapolation since the DMP runs nearly as fast as the loop speed. 
 
 # 5000 Level Tasks
 
