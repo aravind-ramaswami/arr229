@@ -98,7 +98,9 @@ I implemented windup protection to prevent the car from rapidly spinning out of 
 
 # Future Improvements
 
-I would want to investigate adaptive gains so that the controller gains would automatically adjust for different initial setpoints, floor conditions, or battery voltage levels. I was unable to implement this because of time constraints, but I would like to investigate it in the future. Additionally, I would like to combine the linear and orientation pid controllers so the car can be driven to a particular waypoint. 
+I would want to investigate adaptive gains so that the controller gains would automatically adjust for different initial setpoints, floor conditions, or battery voltage levels. I was unable to implement this because of time constraints, but I would like to investigate it in the future. Additionally, I would like to combine the linear and orientation PID controllers so the car can be driven to a particular waypoint. 
 
+# Conclusion
 
+I really enjoyed this lab and the previous lab, as they gave me hands-on experience in developing and implementing a PID controller on a physical robot. It was also cool to see the response curves predicted by control theory appear in my data. I am excited to use these controllers in future labs. Additionally, I would also like to thank Anunth Ramaswami for helping me debug my PID controller and tune its gains. 
 
