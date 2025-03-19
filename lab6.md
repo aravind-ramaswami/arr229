@@ -30,7 +30,7 @@ I followed the advice given by Stephan Wagner and used the DMP to calculate the 
 
 This video shows the DMP successfully working. 
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/irU43pQOWpE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I added code to the setup function which initialized the DMP. 
 
@@ -60,15 +60,15 @@ Here are some videos of the PID loop working and the corresponding data in the J
 
 Run 1: initial = 0, setpoint = 60, final angle = 61.74
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0Enht-ZLk4U?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WOdPBGlDI8g?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Run 2: Initial = 0, setpoint = -90, final angle = -88.74
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_OTk-5bVp1I?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ua0I-36Jd6w?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Run 3: Initial = 0, setpoint = 90, final angle = 88.74
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YkQFPm0epak?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cN66MWjmhl4?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Jupyter Notebook data:
 
@@ -88,13 +88,17 @@ Run 3: Initial = 0, setpoint = 90, final angle = 88.74
 ![lab 6_90_m](https://github.com/user-attachments/assets/5f8274f7-eb81-4791-9455-82299fe1c68c)
 
 
-Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from the last lab). The loop frequency was about x hz and the DMP frequency is y hz, so they are much closer than the TOF sensor. This will lead to a better controller. 
+Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from the last lab). The loop frequency was about 100 Hz and the DMP frequency was 90 Hz, so they are much closer than the TOF sensor. The loop was still faster than the DMP, but the difference was smaller than with the TOF sensor. This will lead to a better controller and performance. 
 
 # 5000 Level Tasks
 
 I implemented windup protection to prevent the car from rapidly spinning out of control. The videos above show the robot with integrator windup protection enabled. The image below shows how I implemented integrator windup protection. I chose to limit the error term to 10% of the maximum control gain to prevent the car from spiraling out of control. The linked videos in this lab demonstrate the controller with integrator windup protection enabled. Without enabling it, the car will rapidly spin. 
 
 ![image](https://github.com/user-attachments/assets/e2edc3fd-9abc-4429-a996-091838498a2f)
+
+# Future Improvements
+
+I would want to investigate adaptive gains, so that the controller gains would automatically adjust for different initial setpoints, floor conditions, or battery voltage levels. I was unable to implement this because of time constraints, but I would like to investigate it in the future. 
 
 
 
