@@ -70,6 +70,10 @@ Run 3: Initial = 0, setpoint = 90, final angle = 88.74
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cN66MWjmhl4?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Disturbance Rejection: starting at 0 degrees
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vi9BAC91a8k?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Jupyter Notebook data:
 
 Run 1: initial = 0, setpoint = 60, final angle = 61.74
