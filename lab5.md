@@ -107,7 +107,7 @@ Data:
 
 # 5000 Level Task
 
-Integrator windup is necessary to prevent the robot from crashing into a wall because the integrator term gets too high. See the code snippet below for my implementation of windup protection. 
+Integrator windup is necessary to prevent the robot from crashing into a wall because the integrator term gets too high. It also prevents the control signal from increasing indefinitely if the robot is stuck somewhere. See the code snippet below for my implementation of windup protection. 
 
 ![image](https://github.com/user-attachments/assets/a475ccbd-2fbc-43c0-ab1b-f395e1bfca0c)
 
@@ -115,7 +115,7 @@ This video shows the robot working with integrator windup enabled.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8azDjgG3cKY?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Overall, this lab taught me how to implement a PID loop on physical hardware. 
+Overall, this lab taught me how to implement a PID loop on physical hardware. Additionally, I would also like to thank Anunth Ramaswami for helping me debug my PID controller and tune its gains. 
 
 
 
