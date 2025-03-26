@@ -81,12 +81,14 @@ These previous two graphs show the importance of tuning the covariance matricies
 
 I initialized these matrices and constants for the Kalman filter.
 
-I have a function in Arduino that operates as my Kalman filter. 
+I have a function in Arduino that operates as my Kalman filter. In this function, the "update" step is only called if a new sensor measurement is ready. This allows the Kalman filter to run faster than the sensor. 
 
+![kalman ](https://github.com/user-attachments/assets/60f36b4c-2822-468c-bbea-a6940e837fae)
 
-I integrated the Kalman filter into the main loop of my robot. 
+I integrated the Kalman filter into the main loop of my robot. I initialzed my state as the negative of the first distance measurement so the filter has a good initial guess. I scaled my control inputs by the initial control signal I used in the open loop response test and clamped its value between -255 and 255. In the loop, I checked if there was new sensor measurement ready. If it was, I updated a flag to indicate this and passed the new sensor measurement and last scaled control input into my kalman filter. If the sensor measurement wasn't ready, I passed "0" as a placeholder for the sensor measurement and passed in the last scaled control input. Through this, the kalman filter would run the predict step when no sensor measurement was available and the the update and predict steps when a sensor measurement was ready. 
+
 ![image](https://github.com/user-attachments/assets/7dac9b11-bd86-4d10-8853-8c3a8d436ed2)
-
+![loop_2](https://github.com/user-attachments/assets/85a7f00c-d690-4649-989d-98eaa39d0966)
 
 
 # Speed Up (Optional)
