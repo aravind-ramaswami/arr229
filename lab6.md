@@ -24,7 +24,7 @@ The equation for the PID loop is identical to the previous lab:
 
 ![image](https://github.com/user-attachments/assets/4073f73f-609b-4a52-a1d4-0544f290199c)
 
-In this case, the target is a specific yaw value, which is a rotation about the z-axis given how I set up my IMU data. Similar to the last lab, I decided to implement a full PID controller to maximize the performance and give myself an extra challenge. 
+In this case, the target is a specific yaw value, which is a rotation about the z-axis, given how I set up my IMU data. Similar to the last lab, I decided to implement a full PID controller to maximize the performance and give myself an extra challenge. 
 
 I followed the advice given by Stephan Wagner and used the DMP to calculate the yaw values. The DMP gives a noise-resistant, bias-correcting measurement of the orientation of the IMU. Its sampling rate is also very high, ensuring a good controller performance. I followed the setup instructions described by Stephan to set up my DMP. I modified the files according to the Artemis Lab 6 DMP example script to enable the DMP and set up the following visualization. 
 
@@ -32,7 +32,7 @@ This video shows the DMP successfully working.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/irU43pQOWpE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I added code to the setup function which initialized the DMP. This sets the DMP to poll the queue at 1.1 kHz without a maximum rotational rate of 2000 degrees/second. This should be more than enough for my car given its hardware limitations. 
+I added code to the setup function, which initialized the DMP. This sets the DMP to poll the queue at 1.1 kHz without a maximum rotational rate of 2000 degrees/second. This should be more than enough for my car, given its hardware limitations. 
 
 ![image](https://github.com/user-attachments/assets/76817842-7e48-42c0-96d7-6b87dcfa2287)
 
@@ -40,7 +40,7 @@ I implemented a function (based on Stephan Wagner's code) that gave the yaw valu
 
 ![image](https://github.com/user-attachments/assets/16767820-92ec-4b5f-8762-5e2023a9a286)
 
-After setting up the DMP, I started to design my controller. I used a very similar code to the last lab, but I had to implement a low-pass filter for the derivative term. I also implemented derivative kick protection to protect against sudden spikes in the setpoint. The low pass filter successfully eliminated most of the spikes in the derivative term from noisy sensor measurements. The low pass filter and the derivative kick protection prevent any rapid spikes in the control input during the PID control motion. Since the DMP gives discrete values, it makes sense to differentiate them. I also implemented an integrator windup protection to prevent the car from spinning out of control. I used a very similar function to drive the robot given the output from the controller. Similar to the last lab, I accounted for the motor's now higher deadband. 
+After setting up the DMP, I started to design my controller. I used a very similar code to the last lab, but I had to implement a low-pass filter for the derivative term. I also implemented derivative kick protection to protect against sudden spikes in the setpoint. The low-pass filter successfully eliminated most of the spikes in the derivative term from noisy sensor measurements. The low-pass filter and the derivative kick protection prevent any rapid spikes in the control input during the PID control motion. Since the DMP gives discrete values, it makes sense to differentiate them. I also implemented an integrator windup protection to prevent the car from spinning out of control. I used a very similar function to drive the robot, given the output from the controller. Similar to the last lab, I accounted for the motor's now higher deadband. 
 
 PID loop:
 
@@ -56,7 +56,7 @@ main loop:
 
 # Controller Testing
 
-I tuned the PID loop to get these gains: kp = 0.04, ki = 0.0001, kd = 0.01
+I tuned the PID loop to get these gains, following a similar procedure to lab 5: kp = 0.04, ki = 0.0001, kd = 0.01
 
 Here are some videos of the PID loop working and the corresponding data in the Jupyter Notebook. You can see that the steady-state error of the car is very low and there is very little overshoot in my controller outputs.
 
@@ -97,7 +97,7 @@ Run 3: Initial = 0, setpoint = 90, final angle = 88.74
 
 # Sampling Rate Discussion
 
-Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from the last lab). The loop frequency was about 100 Hz and the DMP frequency was 90 Hz, so they are much closer together. The loop was still faster than the DMP, but the difference was smaller than with the TOF sensor. This will lead to a better controller and performance. It also minimizes the need for linear extrapolation since the DMP runs nearly as fast as the loop speed. 
+Finally, from this data, we can see that the DMP's frequency is far faster than the TOF sensor data (from the last lab). The loop frequency was about 100 Hz, and the DMP frequency was 90 Hz, so they are much closer together. The loop was still faster than the DMP, but the difference was smaller than with the TOF sensor. This will lead to better control and performance. It also minimizes the need for linear extrapolation since the DMP runs nearly as fast as the loop speed. 
 
 # 5000 Level Tasks
 
