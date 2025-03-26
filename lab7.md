@@ -79,10 +79,14 @@ These previous two graphs show the importance of tuning the covariance matricies
 
 # Implement the Kalman Filter on the Robot
 
-I initialized these matricies and constants for the kalman filter.
+I initialized these matrices and constants for the Kalman filter.
 
-I a function in arduino that operated as my kalman filter. 
+I have a function in Arduino that operates as my Kalman filter. 
 
-I integrated the kalman filter into the main loop of my robot. The 
+
+I integrated the Kalman filter into the main loop of my robot. 
+![image](https://github.com/user-attachments/assets/7dac9b11-bd86-4d10-8853-8c3a8d436ed2)
+
+
 
 # Speed Up (Optional)
