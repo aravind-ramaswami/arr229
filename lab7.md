@@ -69,11 +69,17 @@ I used the data I collected from lab 5 to test my Kalman filter in Python. In th
 
 This gave me the following graph:
 
+![kf_python_trust_sensor - Copy](https://github.com/user-attachments/assets/bca0136a-a3d3-4dc0-927c-22bb8b553394)
+
 This graph shows that the filter can track the sensor measurements very well. 
 
 If I increase the sensor noise slightly, I get the following graph:
 
+![kf_python_trust_sensor_less - Copy](https://github.com/user-attachments/assets/9fbce2db-7e2c-4324-bad2-2322ce160082)
+
 Finally, if I significantly increase the sensor noise, I get this graph:
+
+![kf_python_trust_model](https://github.com/user-attachments/assets/59e539eb-c74c-41e5-95d4-d9d89e472716)
 
 These previous two graphs show the importance of tuning the covariance matrices and that my initial Kalman filter graph (1st one) was tuned pretty well. 
 
