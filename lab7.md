@@ -82,7 +82,7 @@ Finally, if I significantly increase the sensor noise, I get this graph:
 
 ![kf_python_trust_model](https://github.com/user-attachments/assets/59e539eb-c74c-41e5-95d4-d9d89e472716)
 
-The previous two graphs show the importance of tuning the covariance matrices, and my initial Kalman filter graph (1st one) was tuned pretty well. 
+The previous two graphs show the importance of tuning the covariance matrices. As the sensor noise covariance increased, the Kalman filter put more trust in the model, causing the estimated states to differ from the measurements. This would be useful if your dynamic model was very good, but you had noisy sensors. Furthermore, these covariance values must be properly tuned before you deploy the kalman filter, or it will give incorrect state estimates. Since the TOF sensors are pretty accurate, my initial Kalman filter graph (1st one) was tuned pretty well. 
 
 # Implement the Kalman Filter on the Robot
 
@@ -114,9 +114,9 @@ Trial 2:
 
 Credit to Anunth and Nita for cheering on my robot during that run. 
 
-From the graphs and videos, we can see that the Kalman filter is pretty good at tracking the state of the car while it moves and feeding this data into the controller.
+From the graphs and videos, we can see that the Kalman filter is pretty good at tracking the state of the car while it moves and feeding this data into the controller. It successfully extrapolates the robot's position between sensor measurements, increasing the controller frequency and maximizing performance. 
 
 # Speed Up (Optional)
 
-The Kalman filter I wrote is already running faster than the loop speed since it either predicts the state without a sensor measurement or incorporates the sensor measurement into an update step. This can be seen in the graphs above, where the Kalman filter returns more values than the TOF sensor does. Additionally, I measured the Kalman filter's rate as approximately 90 Hz, consistent with my previous measurements of the loop speed while the sensors output data at 20 Hz. 
+The Kalman filter I wrote is already running faster than the loop speed, since it either predicts the state without a sensor measurement or incorporates the sensor measurement into an update step. This can be seen in the graphs above, where the Kalman filter returns more values than the TOF sensor does. Additionally, I measured the Kalman filter's rate as approximately 90 Hz, consistent with my previous measurements of the loop speed while the sensors output data at 20 Hz. 
 
