@@ -92,5 +92,21 @@ I integrated the Kalman filter into the main loop of my robot. I initialized my 
 ![image](https://github.com/user-attachments/assets/7dac9b11-bd86-4d10-8853-8c3a8d436ed2)
 ![loop_2](https://github.com/user-attachments/assets/85a7f00c-d690-4649-989d-98eaa39d0966)
 
+These videos show the Kalman Filter working on my robot. I also overlaid the kalman filter's values with the distance sensor's measurements on the following plots for each of the two runs. The videos and plots are shown below. 
+
+Trial 1:
+
+![kf_robot_1_t2_video_2](https://github.com/user-attachments/assets/10b9f962-98eb-4da2-8127-6149c2ff8531)
+
+
+Trial 2: 
+
+![kf_robot_1_t2_video](https://github.com/user-attachments/assets/47c0db0c-2cff-4fe9-aacb-c966aa6e7467)
+
+credit to Anunth and Nita for cheering on my robot during that run. 
+
+From the graphs and videos, we can see that the Kalman filter is pretty good at tracking the state of the car while it moves and feeding this data into the controller. 
 
 # Speed Up (Optional)
+
+The Kalman filter I wrote is already running faster than the loop speed. This can be seen in the graphs above, where the Kalman filter returns more values than the TOF sensor does. Additionally, I measured the Kalman filter's rate as approximately 90hz, consistent with my previous measurements of the loop speed while the sensors output data at 20hz. 
