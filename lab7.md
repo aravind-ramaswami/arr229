@@ -59,8 +59,30 @@ After this, I initialized my A,B,C matricies and converted them from continous t
 
 ![image](https://github.com/user-attachments/assets/93e51fe0-fc5a-491a-8f8c-397c0f43a3f1)
 
+After initialzing these parameters, the kalman filter was ready to be executed. 
+
 # Implement and test your Kalman Filter in Jupyter (Python)
 
+I used the data I collected from lab 5 to test my kalman filter in python. In this section, the kalman filter is running at the same speed as the sensor measurements, so we are predicting and updating in every step. 
+
+![image](https://github.com/user-attachments/assets/a0adf55d-50a1-4cd8-a41f-9fa28ca0c7f7)
+
+This gave me the following graph:
+
+This graph shows the filter is able to track the sensor measurements very well. 
+
+If I increase the sensor noise slightly, I get the following graph:
+
+Finally, if I significantly increase the sensor noise, I get this graph:
+
+These previous two graphs show the importance of tuning the covariance matricies and that my initial kalman filter graph (1st one) was tuned pretty well. 
+
 # Implement the Kalman Filter on the Robot
+
+I initialized these matricies and constants for the kalman filter.
+
+I a function in arduino that operated as my kalman filter. 
+
+I integrated the kalman filter into the main loop of my robot. The 
 
 # Speed Up (Optional)
