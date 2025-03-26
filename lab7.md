@@ -81,13 +81,13 @@ Finally, if I significantly increase the sensor noise, I get this graph:
 
 ![kf_python_trust_model](https://github.com/user-attachments/assets/59e539eb-c74c-41e5-95d4-d9d89e472716)
 
-These previous two graphs show the importance of tuning the covariance matrices and that my initial Kalman filter graph (1st one) was tuned pretty well. 
+The previous two graphs show the importance of tuning the covariance matrices, and my initial Kalman filter graph (1st one) was tuned pretty well. 
 
 # Implement the Kalman Filter on the Robot
 
 I initialized these matrices and constants for the Kalman filter.
 
-![image](https://github.com/user-attachments/assets/5a25d138-8a15-4198-86c8-df07bd53af2a)
+![image](https://github.com/user-attachments/assets/03812853-f41a-42ce-8ea2-125d9fbcaf3f)
 
 I have a function in Arduino that operates as my Kalman filter. In this function, the "update" step is only called if a new sensor measurement is ready. This allows the Kalman filter to run faster than the sensor. 
 
