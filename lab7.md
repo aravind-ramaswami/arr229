@@ -1,6 +1,6 @@
 # Kalman Filter
 
-In this lab, I developed a Kalman Filter and implemented in it simulation and on my physical robot. 
+In this lab, I developed a Kalman Filter and implemented it in a simulation and on my physical robot. 
 
 # Estimate Drag and Momentum
 
@@ -8,7 +8,7 @@ The Kalman Filter requires a state space model of our dynamic robot. A simple dy
 
 ![image](https://github.com/user-attachments/assets/b90ca1ed-d902-43ed-8a06-40e2468b346a)
 
-We can convert this equation into a state space model by tracking the position and velocity of the car as our states. This gives us the "A" and "B" matricies that we will need later. 
+We can convert this equation into a state space model by tracking the position and velocity of the car as our states. This gives us the "A" and "B" matrices that we will need later. 
 
 ![image](https://github.com/user-attachments/assets/7e863b23-d103-4d91-a159-d3f7042c0d88)
 
@@ -49,43 +49,45 @@ Additionally, the kalman filter assumes the state dynamics have a covariance mat
 
 ![image](https://github.com/user-attachments/assets/b112c1d3-694b-4622-9826-2ebfe542d253)
 
-The kalman filter returns the new state x_{t} which would be used to give the next state. Importantly, the first two steps are called the "predict" step and they run regardless of whether a sensor measurement is received. If a sensor measurement is not received, the kalman filter returns the new state using only the dynamics model. If a sensor measurement is received, the output from the "predict" step is modified through the "update" step (lines 3 and 4) and the new state is returned. 
+The Kalman filter returns the new state x_{t}, which would be used to give the next state. Importantly, the first two steps are called the "predict" step, and they run regardless of whether a sensor measurement is received. If a sensor measurement is not received, the Kalman filter returns the new state using only the dynamics model. If a sensor measurement is received, the output from the "predict" step is modified through the "update" step (lines 3 and 4), and the new state is returned. 
 
-To initialize the kalman filter in python, I translated the equations above into a python function using the code given on the lab website. 
+To initialize the Kalman filter in Python, I translated the equations above into a Python function using the code given on the lab website. 
 
 ![kalman_python](https://github.com/user-attachments/assets/e22ac554-73fb-47e1-a13d-7088852581e1)
 
-After this, I initialized my A,B,C matricies and converted them from continous time to discrete time. The equations for the conversion are given below. I also initialized the covariance matricies for the initial state, dynamic model, and sensor noise. I assumed the intiial state covariance matrix was uncorrelated. Additionally, I assumed the dynamic model covariance matrix was also uncorrelated. 
+After this, I initialized my A, B, and C matrices and converted them from continuous time to discrete time. The equations for the conversion are given below. I also initialized the covariance matrices for the initial state, dynamic model, and sensor noise. I assumed the initial state covariance matrix was uncorrelated. Additionally, I assumed the dynamic model covariance matrix was also uncorrelated. 
 
 ![image](https://github.com/user-attachments/assets/93e51fe0-fc5a-491a-8f8c-397c0f43a3f1)
 
-After initialzing these parameters, the kalman filter was ready to be executed. 
+After initializing these parameters, the Kalman filter was ready to be executed. 
 
 # Implement and test your Kalman Filter in Jupyter (Python)
 
-I used the data I collected from lab 5 to test my kalman filter in python. In this section, the kalman filter is running at the same speed as the sensor measurements, so we are predicting and updating in every step. 
+I used the data I collected from lab 5 to test my Kalman filter in Python. In this section, the Kalman filter is running at the same speed as the sensor measurements, so we are predicting and updating in every step. 
 
 ![image](https://github.com/user-attachments/assets/a0adf55d-50a1-4cd8-a41f-9fa28ca0c7f7)
 
 This gave me the following graph:
 
-This graph shows the filter is able to track the sensor measurements very well. 
+This graph shows that the filter can track the sensor measurements very well. 
 
 If I increase the sensor noise slightly, I get the following graph:
 
 Finally, if I significantly increase the sensor noise, I get this graph:
 
-These previous two graphs show the importance of tuning the covariance matricies and that my initial kalman filter graph (1st one) was tuned pretty well. 
+These previous two graphs show the importance of tuning the covariance matrices and that my initial Kalman filter graph (1st one) was tuned pretty well. 
 
 # Implement the Kalman Filter on the Robot
 
 I initialized these matrices and constants for the Kalman filter.
 
+![image](https://github.com/user-attachments/assets/5a25d138-8a15-4198-86c8-df07bd53af2a)
+
 I have a function in Arduino that operates as my Kalman filter. In this function, the "update" step is only called if a new sensor measurement is ready. This allows the Kalman filter to run faster than the sensor. 
 
 ![kalman ](https://github.com/user-attachments/assets/60f36b4c-2822-468c-bbea-a6940e837fae)
 
-I integrated the Kalman filter into the main loop of my robot. I initialzed my state as the negative of the first distance measurement so the filter has a good initial guess. I scaled my control inputs by the initial control signal I used in the open loop response test and clamped its value between -255 and 255. In the loop, I checked if there was new sensor measurement ready. If it was, I updated a flag to indicate this and passed the new sensor measurement and last scaled control input into my kalman filter. If the sensor measurement wasn't ready, I passed "0" as a placeholder for the sensor measurement and passed in the last scaled control input. Through this, the kalman filter would run the predict step when no sensor measurement was available and the the update and predict steps when a sensor measurement was ready. 
+I integrated the Kalman filter into the main loop of my robot. I initialized my state as the negative of the first distance measurement, so the filter has a good initial guess. I scaled my control inputs by the initial control signal I used in the open-loop response test and clamped their value between -255 and 255. In the loop, I checked if there wasa  new sensor measurement ready. If it was, I updated a flag to indicate this and passed the new sensor measurement and last scaled control input into my Kalman filter. If the sensor measurement wasn't ready, I passed "0" as a placeholder for the sensor measurement and passed in the last scaled control input. Through this, the Kalman filter would run the predict step when no sensor measurement was available and the update and predict steps when a sensor measurement was ready. 
 
 ![image](https://github.com/user-attachments/assets/7dac9b11-bd86-4d10-8853-8c3a8d436ed2)
 ![loop_2](https://github.com/user-attachments/assets/85a7f00c-d690-4649-989d-98eaa39d0966)
