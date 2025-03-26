@@ -101,12 +101,13 @@ I integrated the Kalman filter into the main loop of my robot. I initialized my 
 These videos show the Kalman Filter working on my robot. I also overlaid the kalman filter's values with the distance sensor's measurements on the following plots for each of the two runs. The videos and plots are shown below. 
 
 Trial 1: CwdrH06k_GA?
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CwdrH06k_GA?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![kf_robot_1_t2_video_2](https://github.com/user-attachments/assets/10b9f962-98eb-4da2-8127-6149c2ff8531)
 
 
 Trial 2: -YzgpIOjUtI?
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-YzgpIOjUtI?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ![kf_robot_1_t2_video](https://github.com/user-attachments/assets/47c0db0c-2cff-4fe9-aacb-c966aa6e7467)
 
 credit to Anunth and Nita for cheering on my robot during that run. 
