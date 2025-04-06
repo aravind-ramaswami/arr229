@@ -64,7 +64,12 @@ video: <iframe width="560" height="315" src="https://www.youtube.com/embed/jF080
 ![t3_y](https://github.com/user-attachments/assets/57c62413-5494-472e-a1b5-bc35eb136b8d)
 ![t3_m](https://github.com/user-attachments/assets/f2de459e-2f1c-416a-bf0f-76b0833c5f75)
 
-I have added videos of several successful stunts to showcase system reliability. 
+I have added videos of several additional successful stunts to showcase system reliability. 
+
+video: <iframe width="560" height="315" src="https://www.youtube.com/embed/ZbT3Xe37IuM?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+video: <iframe width="560" height="315" src="https://www.youtube.com/embed/6ms-o9XDNbw?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+video: <iframe width="560" height="315" src="https://www.youtube.com/embed/lGBzyPEmdnM?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 
