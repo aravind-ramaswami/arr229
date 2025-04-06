@@ -40,7 +40,7 @@ I transmitted the data back to the computer using the same callback functions de
 
 I recorded 3 videos of the robot successfully executing the stunt. 
 
-Trial 1: starting distance = 2184mm , run time = 4s
+Trial 1: starting distance = 2184mm , run time = 4.25s
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sDajvFeTYnI?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -48,7 +48,7 @@ Trial 1: starting distance = 2184mm , run time = 4s
 ![t1_y](https://github.com/user-attachments/assets/5b17ecd9-3dac-49c8-b59a-f6cc28b5cafa)
 ![t1_m](https://github.com/user-attachments/assets/cf253504-30ae-48cc-8b97-ad239dd7875c)
 
-Trial 2: starting distance = 2205mm, run time = 
+Trial 2: starting distance = 2205mm, run time = 4.5s
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bo1iYB6LCBQ?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -56,7 +56,7 @@ Trial 2: starting distance = 2205mm, run time =
 ![t2_y](https://github.com/user-attachments/assets/c834c542-b10a-4bd1-b3b5-abe3f2e74322)
 ![t2_m](https://github.com/user-attachments/assets/2ce23f25-bcc7-4a4a-a4b4-fcd32d9bbfab)
 
-Trial 3: starting distance = 2401mm, run time = 
+Trial 3: starting distance = 2401mm, run time = 4.5s
 
 video: <iframe width="560" height="315" src="https://www.youtube.com/embed/jF0804UjzqE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
