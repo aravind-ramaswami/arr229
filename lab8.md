@@ -12,7 +12,7 @@ In this lab, I programmed my car to do a drift that followed the following requi
 
 I implemented the drift stunt by combining code I developed from the previous labs. Steps 1 and 2 were accomplished using the Kalman Filter code developed in Lab 7. I disabled PID control so the robot would drive forward quickly, instead supplying a constant PWM value. 
 
-I used code from lab 6 to turn the car 180 degrees. I modified the orientation PID controller so it would turn 180 degrees from its starting orientation. I modified the PID gains to minimize the time it takes during the drift. This led to significant overshoot, but it made the stunt execute faster and look cooler (in my opinion). After turning the car 180 degrees, I programmed it to drive back across the starting line. 
+I used code from lab 6 to turn the car 180 degrees. I modified the orientation PID controller so it would turn 180 degrees from its starting orientation. I modified the PID gains to minimize the time it takes during the drift. This led to significant overshoot, but it made the stunt execute faster and look cooler (in my opinion). After turning the car 180 degrees, I programmed it to drive back across the starting line. One major modification I made was that I slowed down the DMP's data rate, so it would overload and crash the Artemis. I implemented this after reading Stephan Wagner's website, where he first implements this to prevent the DMP from crashing his Artemis. 
 
 The screenshots below show the code and the associated functions. The main code runs in a loop, calling external functions as necessary. The external functions are essentially unchanged from previous labs, but are listed here for completeness. 
 
@@ -20,9 +20,9 @@ Main Loop code:
 
 ![image](https://github.com/user-attachments/assets/16353c8f-d7db-4a15-8da6-16918d90001d)
 
-![image](https://github.com/user-attachments/assets/4c50c417-20d1-4ad1-986b-eea728a971ee)
+![image](https://github.com/user-attachments/assets/ad16c594-480c-4135-bb2a-c48aa7c84537)
 
-![image](https://github.com/user-attachments/assets/425e94cb-9255-4d45-909d-213877edd4a8)
+![image](https://github.com/user-attachments/assets/d50e36b8-40c3-480f-a8f3-d1361afd492d)
 
 External Functions:
 
@@ -37,6 +37,14 @@ External Functions:
 I transmitted the data back to the computer using the same callback functions developed in labs 5 and 6. 
 
 # Demonstrations
+
+I have provided videos of three different demonstrations to show system reliability. The run time is listed in each video. 
+
+Trial 1: starting distance = , run time = 
+
+Trial 2: starting distance = , run time = 
+
+Trial 3: starting distance = , run time = 
 
 
 
