@@ -58,7 +58,7 @@ Trial 2: starting distance = 2205mm, run time = 4.5s
 
 Trial 3: starting distance = 2401mm, run time = 4s
 
-video: <iframe width="560" height="315" src="https://www.youtube.com/embed/jF0804UjzqE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jF0804UjzqE?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![t3_d](https://github.com/user-attachments/assets/c882cfca-0be8-4142-9add-3ebf39cb2659)
 ![t3_y](https://github.com/user-attachments/assets/57c62413-5494-472e-a1b5-bc35eb136b8d)
@@ -70,7 +70,9 @@ I have added videos of several additional successful stunts to showcase system r
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6ms-o9XDNbw?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lGBzyPEmdnM?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+# Conclusion:
 
+This lab was very fun as I got to combine code and functionality that I had developed over the previous 3 labs into a cool stunt. 
 
 
 
