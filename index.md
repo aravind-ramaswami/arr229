@@ -20,3 +20,5 @@ Hello, my name is Aravind Ramaswami and I am from Tucson, Arizona. I am a senior
 [Lab 6: Orientation PID](/lab6.md)
 
 [Lab 7: Kalman Filter](/lab7.md)
+
+[Lab 8: Stunts!](/lab8.md)
