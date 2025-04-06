@@ -36,15 +36,38 @@ External Functions:
 
 I transmitted the data back to the computer using the same callback functions developed in labs 5 and 6. 
 
-# Demonstrations
+# Demonstration
 
-I have provided videos of three different demonstrations to show system reliability. The run time is listed in each video. 
+I recorded 3 videos of the robot successfully executing the stunt. 
 
-Trial 1: starting distance = , run time = 
+Trial 1: starting distance = 2184mm , run time = 4s
 
-Trial 2: starting distance = , run time = 
+video: 
 
-Trial 3: starting distance = , run time = 
+![t1_d](https://github.com/user-attachments/assets/b3f377cf-377b-4976-b771-eef6b24675f7)
+![t1_y](https://github.com/user-attachments/assets/5b17ecd9-3dac-49c8-b59a-f6cc28b5cafa)
+![t1_m](https://github.com/user-attachments/assets/cf253504-30ae-48cc-8b97-ad239dd7875c)
+
+Trial 2: starting distance = 2205mm, run time = 
+
+video:
+
+![t2_d](https://github.com/user-attachments/assets/2d5d026d-416f-4b16-8410-da56b8d2be8b)
+![t2_y](https://github.com/user-attachments/assets/c834c542-b10a-4bd1-b3b5-abe3f2e74322)
+![t2_m](https://github.com/user-attachments/assets/2ce23f25-bcc7-4a4a-a4b4-fcd32d9bbfab)
+
+Trial 3: starting distance = 2401mm, run time = 
+
+video:
+
+![t3_d](https://github.com/user-attachments/assets/c882cfca-0be8-4142-9add-3ebf39cb2659)
+![t3_y](https://github.com/user-attachments/assets/57c62413-5494-472e-a1b5-bc35eb136b8d)
+![t3_m](https://github.com/user-attachments/assets/f2de459e-2f1c-416a-bf0f-76b0833c5f75)
+
+I have added videos of several successful stunts to showcase system reliability. 
+
+
+
 
 
 
