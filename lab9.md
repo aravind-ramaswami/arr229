@@ -52,7 +52,8 @@ I applied this procedure to generate Cartesian coordinates for the measurements 
 ![map_-3_-2](https://github.com/user-attachments/assets/a75ca007-1ffd-4af7-9c5f-f543f3a5fc4e)
 ![map_0_3](https://github.com/user-attachments/assets/e4727d20-63c1-4a60-9c7e-65c06952e076)
 ![map_5_3](https://github.com/user-attachments/assets/49344087-96b1-4fd3-ba78-3947ac355e69)
-![map_5_-3](https://github.com/user-attachments/assets/74a694df-2212-46ac-8e21-e6c59c9020e4)
+![image](https://github.com/user-attachments/assets/5a20b71c-e50f-46c9-9d47-7b8a4489689f)
+
 
 The polar plots and Cartesian maps seem reasonable given the measurement point. 
 
