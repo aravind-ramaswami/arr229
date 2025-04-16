@@ -11,9 +11,11 @@ Main Loop Code:
 ![code_1](https://github.com/user-attachments/assets/644f07d0-534f-46cd-ba56-349dbc80c1d3)
 ![code_2](https://github.com/user-attachments/assets/edad9f07-9545-4278-a759-b8df6087923b)
 
-The functions angular_PID_control(), angular_drive_motors(), and get_IMU_dmp() are the exact same functions used in lab 6. 
+The functions angular_PID_control(), angular_drive_motors(), and get_IMU_dmp() are the same functions used in lab 6. 
 
 Orientation Control:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f3X488UfSFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The video above shows my robot turning in a full circle. Note, I did not realize that I had to make a video of this until I was writing up the lab report, so I recorded my robot spinning in a circle in an Upson hallway instead of the actual environment. From the video, we can see that the robot turns relatively on axis, but it does drift slightly. From the physical tests in the lab, my robot does not drift outside of the 1ft x 1ft grid tiles. My robot appears to drift laterally for a maximum of about 2in on either side, so I would expect the maximum error in my map to be 4in and the average error to be 2in. However, since I take 4 sensor values, they should partially compensate for this drift and increase my accuracy. 
 
