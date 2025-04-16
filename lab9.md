@@ -35,18 +35,24 @@ The 2nd transformation converts the robot's frame of reference to the inertial c
 
 ![image](https://github.com/user-attachments/assets/6ada4f2c-eb36-40fc-980a-32010555cf25)
 
-Let us define a vector P which represents the ToF sensor's value. Given a sensor measurement d, we can write P as:
+Let us define a vector P that represents the ToF sensor's value. Given a sensor measurement d, we can write P as:
 
 ![image](https://github.com/user-attachments/assets/ba512e06-9647-4db1-b5da-65dbdf7182d0)
 
-Given P, we can compute the cartesian coordinates (x_c,y_c) with the following transformation equation:
+Given P, we can compute the Cartesian coordinates (x_c,y_c) with the following transformation equation:
 
-![image](https://github.com/user-attachments/assets/17cb8982-6e45-4713-b772-74ee369bdbb1)
+![image](https://github.com/user-attachments/assets/46aee826-ec42-416d-9fd2-f4bc61637134)
 
-The following python code shows how I implemented this transformation for one of the fixed points.
+The following Python code shows how I implemented this transformation for one of the fixed points.
 
+![tf_python](https://github.com/user-attachments/assets/5db2d7bf-4a44-4317-a13e-ae9bc7002d3c)
 
+I applied this procedure to generate Cartesian coordinates for the measurements from each fixed point. I also plotted the polar plot for those same measurements. They are shown below. 
 
+![map_-3_-2](https://github.com/user-attachments/assets/a75ca007-1ffd-4af7-9c5f-f543f3a5fc4e)
+![map_0_3](https://github.com/user-attachments/assets/e4727d20-63c1-4a60-9c7e-65c06952e076)
+![map_5_3](https://github.com/user-attachments/assets/49344087-96b1-4fd3-ba78-3947ac355e69)
+![map_5_-3](https://github.com/user-attachments/assets/74a694df-2212-46ac-8e21-e6c59c9020e4)
 
 
 
