@@ -68,4 +68,5 @@ Trial 2:
 
 <img width="543" alt="image" src="https://github.com/user-attachments/assets/e3f4f872-7b9a-40a7-a19f-b8351bef685f" />
 
-# Conclusion
+From these trials, I saw that the filter does a very good job of tracking the robot's position through the map. It is best when the robot is traveling along narrow walls, when the sensor measurements are relatively consistent. It works the worst in the center of the map, where some measurements are obstructed by obstacles and others are not. Overall, the errors were relatively small, and the robot tracks the robot very well. Additionally, the simulation also shows that the odometry measurements are completely off, as the red curve is not close at all to the green curve. 
+
