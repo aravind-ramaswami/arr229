@@ -58,11 +58,15 @@ These videos show my Bayes filter working. The first video is with the loop-base
 
 Trial 1:
 
+sAafPrQ_Bjs
+
 <img width="473" alt="fast_robots_l10_v1" src="https://github.com/user-attachments/assets/3777a0ea-c730-4bdf-8909-2f1ea344cd8f" />
 
 <img width="528" alt="image" src="https://github.com/user-attachments/assets/b57ad5fc-52d2-4a98-aceb-379f14e89fc4" />
 
 Trial 2:
+
+O9dfm5hdWCc
 
 <img width="364" alt="fast_robots_l10_v2" src="https://github.com/user-attachments/assets/bbc2080a-f992-4dc5-8155-891f9c14479a" />
 
