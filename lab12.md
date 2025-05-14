@@ -54,7 +54,7 @@ Thus, the nonlinear equations of motion are:
 
 To create a state space model, we need to linearize the system. Formally, we would have to compute the jacobians around an equilibrium point, but we can use linearize this system by noting some properties of theta for small angles. The linearization is shown below. 
 
-<img width="131" alt="image" src="https://github.com/user-attachments/assets/ae34620a-e110-448d-a2ce-5e004aab5d96" />
+<img width="190" alt="image" src="https://github.com/user-attachments/assets/5ec4760e-22d8-48ad-8d05-d3fb52860e16" />
 
 After the equations are linearized, we can solve for theta so it is not dependent on x. 
 
@@ -95,6 +95,8 @@ With the RC car's measurements, we found that alpha1 = 6.21, alpha2 = 50 best de
 We played around in MATLAB with the discretized system and the place() command to generate different controllers given a set of eigenvalues. We eventually settled of eigenvalues of 0.87 and 0.75. Since we are operating in discrete time, these eigenvalues will stabilize the system. These eigenvalues returned controller gains of 2.373 and 0.4471. However, these system matricies assumed that the controller operates on radians, while our controller operates on degree measurements. Thus, we scaled these controller values by multiplying by pi/180 to give us 0.041 and 0.0078. In practice, we found that the 2nd gain value, which operates on the angular velocity, was too high, and made the system jerk too much. We lowered it down to 0.002, and the system worked better. 
 
 Thus, our final gains were K = [0.04 0.002], which was used on the controller. The implemetation is shown in the code below. The actual code implementation is very similar to Anunth's lab 6 orientation controller (since we are using his robot), except that the gains are replaced by the ones we computed using the dynamic model. 
+
+<img width="709" alt="image" src="https://github.com/user-attachments/assets/39012c44-34cb-4b7a-82bf-77c650ba3b16" />
 
 <img width="634" alt="image" src="https://github.com/user-attachments/assets/8fa69ba4-e8f1-44c6-b9c1-2fd89eb249c9" />
 
@@ -153,7 +155,9 @@ Additionally, here are a number of additional videos showing the stunt working.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5S5q_3baU6M?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QAAuYinvvWo?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/szbKXjP3W68?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
