@@ -88,17 +88,25 @@ With the RC car's measurements, we found that alpha1 = 6.21, alpha2 = 50 best de
 
 <img width="217" alt="image" src="https://github.com/user-attachments/assets/629e3e9f-988f-4631-a1c9-d3e95c4a3e22" />
 
-We played around in MATLAB with the discretized system and the place() command to generate different controllers given a set of eigenvalues. We eventually settled of eigenvalues of 0.87 and 0.75. These eigenvalues returned controller gains of 2.373 and 0.4471. However, these system matricies assumed that the controller operates on radians, while our controller operates on degree measurements. Thus, we scaled these controller values by multiplying by pi/180 to give us 0.041 and 0.0078. In practice, we found that the 2nd gain value, which operates on the angular velocity, was too high, and made the system jerk too much. We lowered it down to 0.002, and the system worked better. 
+We played around in MATLAB with the discretized system and the place() command to generate different controllers given a set of eigenvalues. We eventually settled of eigenvalues of 0.87 and 0.75. Since we are operating in discrete time, these eigenvalues will stabilize the system. These eigenvalues returned controller gains of 2.373 and 0.4471. However, these system matricies assumed that the controller operates on radians, while our controller operates on degree measurements. Thus, we scaled these controller values by multiplying by pi/180 to give us 0.041 and 0.0078. In practice, we found that the 2nd gain value, which operates on the angular velocity, was too high, and made the system jerk too much. We lowered it down to 0.002, and the system worked better. 
 
-Thus, our final gains were K = [0.04 0.002], which was used on the controller. The implemetation is shown in the code below.
+Thus, our final gains were K = [0.04 0.002], which was used on the controller. The implemetation is shown in the code below. The actual code implementation is very similar to Anunth's lab 6 orientation controller (since we are using his robot), except that the gains are replaced by the ones we computed using the dynamic model. 
 
 
 
 # Kalman Filter Implementation 
 
+The kalman filter was essentially taken from the Aravind's lab 7 code. The system matricies A,B,C were derived above. Since the lab 7 code was written to be general, all we had to change the initialization near the top where the matricies and noise parameters are defined. We assumed very low noise for the DMP and IMU, since we trusted those measurements far more than the dynamics model, which is a very crude approximation. The code for the kalman filter is shown below, along with the initialization parameters. 
 
 
 # Flip 
+
+After the controller and kalman filter was implemented, we moved on to developing the flip code. The flip code was modified from Nita's lab 8 code, since she attempted the stunt. The flip code essentially drives the robot forward, brakes, and reverses it. The brake and reversal is what initiates a flip. There are delay times to control how long the car should accelerate for and reverse. These timers were tuned to achieve a flip. As the car is executing the flip, the code constantly checks if the pitch angle is above 60 degrees (measured from the vertical). When this happens, the code immediates switches from executing the flip to running the controller and kalman filter. The following state machine shows how this works. 
+
+<img width="843" alt="image" src="https://github.com/user-attachments/assets/717c6743-884b-41c7-ae66-3e901303094b" />
+
+
+The flip code is shown below. 
 
 # Full System demonstration
 
