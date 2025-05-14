@@ -98,8 +98,6 @@ Thus, our final gains were K = [0.04 0.002], which was used on the controller. T
 
 <img width="634" alt="image" src="https://github.com/user-attachments/assets/8fa69ba4-e8f1-44c6-b9c1-2fd89eb249c9" />
 
-
-
 # Kalman Filter Implementation 
 
 The kalman filter was essentially taken from the Aravind's lab 7 code. The system matricies A,B,C were derived above. Since the lab 7 code was written to be general, all we had to change the initialization near the top where the matricies and noise parameters are defined. We assumed very low noise for the DMP and IMU, since we trusted those measurements far more than the dynamics model, which is a very crude approximation. The code for the kalman filter is shown below, along with the initialization parameters. 
@@ -133,17 +131,31 @@ We recorded the data for two successfull demonstrations.
 
 Demo 1:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sAafPrQ_Bjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ![orientation_t2](https://github.com/user-attachments/assets/3aa1eb40-0150-4bc8-8c8a-3ae86c6c5748)
 
 ![u_sig_t2](https://github.com/user-attachments/assets/41a39e86-0c36-4694-924b-5f306bbba498)
 
 Demo 2:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O9dfm5hdWCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ![orientation_t3](https://github.com/user-attachments/assets/f7d1ea87-60b3-4145-bb12-e3c5173b7b3c)
 
 ![u_sig_t3](https://github.com/user-attachments/assets/0c0faa12-61e3-42fc-9202-db77dffd7eda)
 
+This is also a seperate controller test showcasing how robust it is.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QNDRmvV0Qqg?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Additionally, here are a number of additional videos showing the stunt working. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sAafPrQ_Bjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sAafPrQ_Bjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sAafPrQ_Bjs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Work breakdown
 
