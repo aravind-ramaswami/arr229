@@ -96,11 +96,21 @@ We played around in MATLAB with the discretized system and the place() command t
 
 Thus, our final gains were K = [0.04 0.002], which was used on the controller. The implemetation is shown in the code below. The actual code implementation is very similar to Anunth's lab 6 orientation controller (since we are using his robot), except that the gains are replaced by the ones we computed using the dynamic model. 
 
+<img width="634" alt="image" src="https://github.com/user-attachments/assets/8fa69ba4-e8f1-44c6-b9c1-2fd89eb249c9" />
+
 
 
 # Kalman Filter Implementation 
 
 The kalman filter was essentially taken from the Aravind's lab 7 code. The system matricies A,B,C were derived above. Since the lab 7 code was written to be general, all we had to change the initialization near the top where the matricies and noise parameters are defined. We assumed very low noise for the DMP and IMU, since we trusted those measurements far more than the dynamics model, which is a very crude approximation. The code for the kalman filter is shown below, along with the initialization parameters. 
+
+Initial Parameters:
+
+<img width="667" alt="image" src="https://github.com/user-attachments/assets/87e5cb50-c47f-447e-a17d-73c32c1cdac9" />
+
+Kalman Filter Code:
+
+<img width="807" alt="image" src="https://github.com/user-attachments/assets/a04abb1f-c6f5-402b-920e-c71c675282de" />
 
 
 # Flip 
@@ -112,8 +122,33 @@ After the controller and kalman filter was implemented, we moved on to developin
 
 The flip code is shown below. 
 
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/f654329e-b329-47f2-9f80-ab156978d653" />
+
+<img width="526" alt="image" src="https://github.com/user-attachments/assets/00430c8d-5b47-4915-a457-995093271434" />
+
+
 # Full System demonstration
+
+We recorded the data for two successfull demonstrations. 
+
+Demo 1:
+
+![orientation_t2](https://github.com/user-attachments/assets/3aa1eb40-0150-4bc8-8c8a-3ae86c6c5748)
+
+![u_sig_t2](https://github.com/user-attachments/assets/41a39e86-0c36-4694-924b-5f306bbba498)
+
+Demo 2:
+
+![orientation_t3](https://github.com/user-attachments/assets/f7d1ea87-60b3-4145-bb12-e3c5173b7b3c)
+
+![u_sig_t3](https://github.com/user-attachments/assets/0c0faa12-61e3-42fc-9202-db77dffd7eda)
+
+Additionally, here are a number of additional videos showing the stunt working. 
 
 # Work breakdown
 
+Although we all worked on this project together, we broke up the project with the following roles. Aravind did the system modeling to derive the state space modeling and implemented the controller. Anunth implemented the controller. Nita developed the flip code. We also tested the robot together. 
+
 # Conclusion
+
+This was a very fun lab, and I am excited that I got to create a cool stunt with the robot using the tools I have learned. Overall, this has been one of my favorite classes at Cornell. Thank you to all of the TA's who helped me throughout the semester. 
