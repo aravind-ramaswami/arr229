@@ -24,9 +24,15 @@ I: moment of inertia of the rod about its center of mass
 
 The 1st step when using lagrangian mechanics is to derive the total kinetic and potential energy of the system. The potential energy of the system is determined by the postion of the rod's center of mass. The wheel does not contribute to the potential energy since it does not leave the ground, so we can defined potential energy as the center of the wheel. Similarly, we can define zero potential energy for the rod when the rod is pointing straight up. The kinetic energy of the system is the kinetic energy of the rod + the kinetic energy of the wheel. These are derived below. 
 
+The kinetic energy of the wheel is relatively easy.
+
 <img width="100" alt="image" src="https://github.com/user-attachments/assets/ea417bf8-797e-49c4-8afd-add27b5833d6" />
 
+The kinetic energy of the rod is more complicated and reqiures some manipulation. 
+
 <img width="236" alt="image" src="https://github.com/user-attachments/assets/40019f93-bc27-4026-a183-dff8eab41684" />
+
+The potential energy of the rod is also simple to compute.
 
 <img width="88" alt="image" src="https://github.com/user-attachments/assets/7fb5d4b8-cf2c-4343-9390-bcf1fbe3e9df" />
 
@@ -72,7 +78,25 @@ Since the system is controllable and observable, we can develop a state space co
 
 # Controller Design 
 
+We decided to implement a state space based controller, instead of the PID loop that we had used in Lab 6. The state space controller is typically defined as u = -Kx, where x is the state of the system. However, because of how we oriented the car and how the sensor gave as measurement, we actually had to apply a control signal u = Kx to stabilize the car. We used the DMP and gyroscope to measure both the angle and angular velcoity at the same time. This gave us better control of the car. Essentially then, the u = Kx was basically implementing a PD controller, but the gains were determined using state space control design techniques. We can use the place() command in matlab, which requires system matricies(A,B) and the eigenvalues you want the closed loop ststem (A + BK) to have.
+
+Similar to lab 5, we used lumped system modeling to create two constants(alpha1, alpha2) that govern the dynamics of the car. 
+
+<img width="159" alt="image" src="https://github.com/user-attachments/assets/6494b31b-e52d-49fc-817e-727fc358314b" />
+
+With the RC car's measurements, we found that alpha1 = 6.21, alpha2 = 50 best describe the car. These parameters seemed to work well for the controller. After selecting these parameters, we had to discretize the system based on the loop speed. With testing, we determined that the loop speed was 0.017 seconds. With this, we discretized the system using euler discretization. 
+
+<img width="217" alt="image" src="https://github.com/user-attachments/assets/629e3e9f-988f-4631-a1c9-d3e95c4a3e22" />
+
+We played around in MATLAB with the discretized system and the place() command to generate different controllers given a set of eigenvalues. We eventually settled of eigenvalues of 0.87 and 0.75. These eigenvalues returned controller gains of 2.373 and 0.4471. However, these system matricies assumed that the controller operates on radians, while our controller operates on degree measurements. Thus, we scaled these controller values by multiplying by pi/180 to give us 0.041 and 0.0078. In practice, we found that the 2nd gain value, which operates on the angular velocity, was too high, and made the system jerk too much. We lowered it down to 0.002, and the system worked better. 
+
+Thus, our final gains were K = [0.04 0.002], which was used on the controller. The implemetation is shown in the code below.
+
+
+
 # Kalman Filter Implementation 
+
+
 
 # Flip 
 
