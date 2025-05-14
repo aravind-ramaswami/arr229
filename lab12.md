@@ -66,7 +66,11 @@ At this point, we can ignore the x equation, since we only care about stabilizin
 
 We can develop a state space model from this linearized model. We were able to measure both the angle and angular velocity (this is described in the controller design section).
 
+The state of the system is the angle and angular velocity. Additionally, the control input is the torque applied by the motor to the wheel. 
+
 <img width="109" alt="image" src="https://github.com/user-attachments/assets/44bcadf4-9e62-4827-a03b-0738e4db1280" />
+
+The system matricies (A,B,C) are shown below.
 
 <img width="233" alt="image" src="https://github.com/user-attachments/assets/b0d8fdb3-cc07-4d6a-b408-387ac4a5347a" />
 
