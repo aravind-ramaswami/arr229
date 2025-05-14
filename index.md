@@ -29,4 +29,4 @@ Hello, my name is Aravind Ramaswami and I am from Tucson, Arizona. I am a senior
 
 [Lab 11: Localization(real)](/lab11.md)
 
-[Lab 12: Flip Up)](/lab12.md)
+[Lab 12: Flip Up](/lab12.md)
